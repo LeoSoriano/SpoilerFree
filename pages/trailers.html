@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>SpoilerFree</title>
+</head>
+
+<body class="series-page">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/SpoilerFree.png" alt="SpoilerFree" width="230" height="80" class="logo">
+                </a>
+                <!-- Botón para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Lista centrada -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-2">
+                        <li class="nav-item mx-4"><a class="nav-link text-white fs-3" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item mx-4"><a class="nav-link text-white fs-3" href="./series.html">Series</a>
+                        </li>
+                        <li class="nav-item mx-4"><a class="nav-link text-white fs-3"
+                                href="./peliculas.html">Películas</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link text-white fs-3"
+                                href="./trailers.html">Tráilers</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link text-white fs-3"
+                                href="./contacto.html">Contacto</a></li>
+                    </ul>
+                    <form class="d-flex ms-auto">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Sección de Tráilers -->
+        <section class="bg-dark text-light py-5" data-bs-theme="light">
+            <div class="container">
+
+                <!-- Título -->
+                <h1 class="TrailerNew"> Tráilers de Series</h1>
+
+                <!-- Carrusel destacado -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/depredador.jpg" class="d-block w-100" alt="Depredador">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/fallout.jpg" class="d-block w-100" alt="Fallout">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/paper.jpg" class="d-block w-100" alt="Paper">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+
+
+
+
+
+                <!-- Tráiler más visto -->
+                <div>
+                    <h3 class="MakerTitle"> Tráiler más visto de la semana</h3>
+                    <br>
+                    <div class="ratio ratio-16x9 mt-3">
+                        <iframe src="https://www.youtube.com/embed/1PyYZYubaTI?si=JYvSaZ-CkxMZXwg3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <br>
+                    <p class="mt-2">Peacemaker - Temporada 2<br><small>👁️ 1.2M vistas</small></p>
+
+                    <!-- Filtros -->
+                    <div class="text-center mb-4">
+                        <button class="btn btn-outline-light me-2">Próximos estrenos</button>
+                        <button class="btn btn-outline-light me-2">Más vistos</button>
+                        <button class="btn btn-outline-light">Nuevos</button>
+                    </div>
+
+                    <!-- Galería de tráilers -->
+                    <div class="row g-4 galeria-trailers-scroll">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card bg-dark text-light border-0">
+                                <img src="../img/fallout.jpg" class="card-img" alt="Fallout">
+                                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                    <a href="https://youtu.be/7o4kjr1SroQ?si=yVhVOj13-8WHDtCU" class="btn btn-danger" target="_blank">▶
+                                        Play</a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Fallout</h5>
+                                    <p class="card-text">Próximamente</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card bg-dark text-light border-0">
+                                <img src="../img/paper.jpg" class="card-img" alt="The Paper">
+                                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                    <a href="https://youtu.be/c5v4LJJkvUU?si=rNy6yAmrNhb8VQxi" class="btn btn-danger" target="_blank">▶
+                                        Play</a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">The Paper</h5>
+                                    <p class="card-text">Estreno 2025</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card bg-dark text-light border-0">
+                                <img src="../img/murder.jpg" class="card-img" alt="Only Murder in the Building">
+                                <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                                    <a href="https://youtu.be/eMHPkbn0hdM?si=gNHWaHTLAP0wSux7" class="btn btn-danger" target="_blank">▶
+                                        Play</a>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Only Murder in the Building</h5>
+                                    <p class="card-text">Estreno 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <aside>
+            <h3>Plataformas</h3>
+            <ul>
+                <li><a href="https://tv.apple.com/mx" target="_blank">Apple Tv</a></li>
+                <li><a href="https://www.disneyplus.com" target="_blank">Disney</a></li>
+                <li><a href="https://www.hbomax.com" target="_blank">HBO Max</a></li>
+                <li><a href="https://www.netflix.com" target="_blank">Netflix</a></li>
+                <li><a href="https://www.paramountplus.com" target="_blank">Paramount</a></li>
+                <li><a href="https://www.primevideo.com" target="_blank">Prime Video</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div class="contenedor-pie">
+            <br>
+            <p>&copy;2025 SpoilerFree</p>
+            <ul class="footer-menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./series.html">Series</a></li>
+                <li><a href="./peliculas.html">Peliculas</a></li>
+                <li><a href="./trailers.html">Trailers</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+            <div class="redes">
+                <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a> |
+                <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a> |
+                <a href="https://x.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
