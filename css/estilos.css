@@ -893,6 +893,15 @@ footer .redes a {
     width: 180px;
     height: auto;
   }
+}
+@media (max-width: 350px) {
+  .logo {
+    width: 150px;
+  }
+}
+
+/* ---------- NAVBAR ---------- */
+@media (max-width: 400px) {
   .navbar-collapse {
     padding: 8px 0;
     border-radius: 6px;
@@ -911,34 +920,47 @@ footer .redes a {
   }
 }
 @media (max-width: 350px) {
-  .logo {
-    width: 150px;
-    height: auto;
+  .navbar-collapse .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 4px 6px;
+  }
+  .navbar-collapse .d-flex input,
+  .navbar-collapse .d-flex button {
+    font-size: 0.85rem;
   }
 }
-/* Titulos Index */
+
+/* ---------- TITULOS INDEX ---------- */
 @media (max-width: 400px) {
   .novedad {
     font-size: 2.2rem;
   }
-  .emmys {
-    font-size: 1.6rem;
-  }
 }
-/* Titulos index */
 @media (max-width: 350px) {
   .novedad {
     font-size: 1.9rem;
   }
+}
+
+@media (max-width: 400px) {
+  .emmys {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 350px) {
   .emmys {
     font-size: 1.4rem;
   }
+}
+
+@media (max-width: 350px) {
   .contenedor-titulo,
   .contenedor-subtitulo {
     margin: 30px 10px 15px 10px;
   }
 }
-/* carrusl querys*/
+
+/* ---------- CARRUSEL ---------- */
 @media (max-width: 400px) {
   .carousel-container {
     max-width: 90%;
@@ -965,7 +987,8 @@ footer .redes a {
     padding: 5px 8px;
   }
 }
-/* Estrellas index media query */
+
+/* ---------- CONTENIDO PRINCIPAL / ITEMS ---------- */
 @media (max-width: 400px) {
   .contenedor-general {
     gap: 20px;
@@ -974,7 +997,8 @@ footer .redes a {
   .contenedor-general .items {
     width: 90%;
   }
-  .contenedor-general .items img, .contenedor-general .items iframe {
+  .contenedor-general .items img,
+  .contenedor-general .items iframe {
     height: auto;
     padding: 15px;
   }
@@ -995,7 +1019,8 @@ footer .redes a {
   .contenedor-general .items {
     width: 95%;
   }
-  .contenedor-general .items img, .contenedor-general .items iframe {
+  .contenedor-general .items img,
+  .contenedor-general .items iframe {
     padding: 10px;
   }
   .contenedor-general .items h2 {
@@ -1008,7 +1033,8 @@ footer .redes a {
     font-size: 0.85rem;
   }
 }
-/* Aside General media query */
+
+/* ---------- ASIDE ---------- */
 @media (max-width: 400px) {
   aside {
     width: 140px;
@@ -1037,7 +1063,8 @@ footer .redes a {
     padding: 4px 6px;
   }
 }
-/* -------------------Footer Media Querys------------------ */
+
+/* ---------- FOOTER ---------- */
 @media (max-width: 400px) {
   footer {
     padding: 15px 0;
@@ -1068,6 +1095,7 @@ footer .redes a {
     margin: 0 3px;
   }
 }
+
 /*-------Pagina Series Media Querys-------*/
 @media (max-width: 400px) {
   body.series-page .contenedor-tituloSeries,
