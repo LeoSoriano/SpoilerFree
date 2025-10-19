@@ -1,0 +1,56 @@
+// ! FOOTER
+@use "../base/funcionalidades" as *;
+
+%footer-link{
+    
+        color: $texto-blanco;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+        color: $azul-bootstrap;
+        }
+    
+    
+}
+
+%footer-menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 10px;
+
+}
+
+
+footer {
+background-color: $gris-carbon;
+color: $texto-blanco;
+padding: 20px 0;
+text-align: center;
+font-family: c(pie);
+
+p {
+    margin-bottom: 10px;
+}
+
+ul.footer-menu {
+    @extend %footer-menu;
+    li {
+    a {
+        @extend %footer-link;
+        }
+    }
+}
+
+.redes {
+        a {
+            @extend %footer-link;
+            margin: 0 5px;
+            font-size: 1.2rem;
+        }
+    }
+}
+

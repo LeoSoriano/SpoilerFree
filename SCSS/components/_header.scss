@@ -1,0 +1,98 @@
+// Placeholder para efecto neon
+@use "../base/funcionalidades" as *;
+%efecto-neon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 5px $cyan-1)
+          drop-shadow(0 0 15px $azul-claro);
+}
+
+// Placeholder para efecto hover neon
+%efecto-neon-hover {
+  transform: scale(1.12) rotate(-2deg);
+  filter: drop-shadow(0 0 20px $cyan-1)
+          drop-shadow(0 0 35px $azul-claro)
+          drop-shadow(0 0 50px $cyan-1);
+  animation: neonPulseHover 0.5s infinite alternate;
+}
+
+//! Header y NavBar General
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+// Logo con animación neón
+.logo {
+  position: relative;
+  display: inline-block;
+  @extend %efecto-neon;
+  animation: neonPulse 2.5s infinite alternate;
+
+  &:hover {
+    @extend %efecto-neon-hover;
+  }
+}
+
+@keyframes neonPulse {
+  50% { 
+    filter: drop-shadow(0 0 10px $cyan-1)
+            drop-shadow(0 0 25px $azul-claro);
+    transform: scale(1.05) rotate(1deg); 
+  }
+  100% { 
+    filter: drop-shadow(0 0 15px $cyan-1)
+            drop-shadow(0 0 30px $azul-claro);
+    transform: scale(1.08) rotate(-1deg); 
+  }
+}
+
+@keyframes neonPulseHover {
+  0% { filter: drop-shadow(0 0 20px $cyan-1) drop-shadow(0 0 35px $azul-claro); }
+  50% { filter: drop-shadow(0 0 30px $cyan-1) drop-shadow(0 0 50px $azul-claro); }
+  100% { filter: drop-shadow(0 0 25px $cyan-1) drop-shadow(0 0 45px $azul-claro); }
+}
+
+//! NavBar
+.navbar {
+  background-color: $gris-oscuro1;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+
+  .navbar-nav {
+    .nav-link {
+      font-family: c(parrafo);  // Fuente para texto general
+      transition: color 0.3s, text-shadow 0.3s;
+
+      &:hover {
+        color: $cyan-1; 
+        text-shadow: 0 0 5px $cyan-1,
+                    0 0 15px $azul-claro,
+                    0 0 25px $cyan-1;
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  padding: 6px 0;
+  border-radius: 5px;
+
+  .navbar-nav {
+    .nav-link {
+      font-size: 0.9rem;
+      padding: 4px 6px;
+    }
+  }
+
+  .d-flex {
+    width: 85%;
+
+    input,
+    button {
+      font-family: c(parrafo);  // Fuente para inputs y botones
+      font-size: 0.8rem;
+      padding: 5px;
+    }
+  }
+}
+
