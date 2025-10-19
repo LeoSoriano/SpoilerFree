@@ -297,28 +297,30 @@ aside ul li:hover a {
 body.series-page {
   background-color: #0d1117;
   font-family: "Nunito", sans-serif;
-  /* Titulos Pag Series */
 }
-body.series-page .contenedor-tituloSeries,
-body.series-page .contenedor-subtitulo2 {
+
+/* Titulos Pag Series */
+.contenedor-tituloSeries,
+.contenedor-subtitulo2 {
   text-align: center;
   margin: 50px 20px 20px 20px;
   animation: slideDown 1.2s ease both;
 }
-body.series-page .seriesNew {
+
+.seriesNew {
   font-size: 3rem;
   color: #00bfff;
   text-shadow: 0 0 10px #00bfff, 0 0 20px #00ffff, 0 0 30px #00ffff;
 }
-body.series-page .estreno {
+
+.estreno {
   font-size: 2rem;
   color: #ff0040;
   text-shadow: 0 0 15px #ff0040, 0 0 30px #ff0040;
 }
-body.series-page {
-  /*Carrusel pag Series */
-}
-body.series-page .carousel {
+
+/*Carrusel pag Series */
+.carousel {
   width: 80%;
   margin: 40px auto;
   border-radius: 10px;
@@ -326,20 +328,19 @@ body.series-page .carousel {
   animation: fadeIn 1.5s ease-in-out;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.5019607843);
 }
-body.series-page .carousel .carousel-item img {
+.carousel .carousel-item img {
   filter: brightness(85%);
   transition: transform 0.8s ease, filter 0.8s ease, box-shadow 0.5s;
   border-radius: 10px;
 }
-body.series-page .carousel .carousel-item img:hover {
+.carousel .carousel-item img:hover {
   transform: scale(1.05);
   filter: brightness(100%);
   box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
 }
-body.series-page {
-  /*  Contenido  Pag Series  */
-}
-body.series-page .contenido-principal {
+
+/*  Contenido  Pag Series  */
+.contenido-principal {
   background: #1f2937;
   background-size: 400% 400%;
   animation: gradientShift 20s ease infinite;
@@ -348,10 +349,9 @@ body.series-page .contenido-principal {
   margin: 20px auto;
   max-width: 1300px;
 }
-body.series-page {
-  /*  CARDS SERIES  */
-}
-body.series-page .items-series {
+
+/*  CARDS SERIES  */
+.items-series {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -366,11 +366,12 @@ body.series-page .items-series {
   overflow: hidden;
   position: relative;
 }
-body.series-page .items-series:hover {
+.items-series:hover {
   transform: translateY(-10px) rotateZ(1deg);
   box-shadow: 0 0 35px rgba(0, 191, 255, 0.8), 0 15px 25px rgba(0, 0, 0, 0.7019607843);
 }
-body.series-page .items-series img {
+
+img {
   display: block;
   margin: 0 auto;
   width: 500px;
@@ -381,11 +382,12 @@ body.series-page .items-series img {
   box-shadow: 0 0 15px rgba(0, 191, 255, 0.5019607843);
   transition: transform 0.5s, box-shadow 0.5s;
 }
-body.series-page .items-series img:hover {
+img:hover {
   transform: scale(1.08) rotateZ(-1deg);
   box-shadow: 0 0 30px rgba(0, 191, 255, 0.9019607843), 0 0 60px rgba(0, 191, 255, 0.5019607843);
 }
-body.series-page .items-series h2 {
+
+h2 {
   color: #00ffff;
   font-size: 1.9rem;
   margin: 0;
@@ -393,28 +395,31 @@ body.series-page .items-series h2 {
   transition: text-shadow 0.3s;
   text-align: center;
 }
-body.series-page .items-series h2:hover {
+h2:hover {
   text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff, 0 0 45px #00ffff, 0 0 60px #00ffff;
 }
-body.series-page .items-series h3 {
+
+h3 {
   color: #ccc;
   font-size: 1.2rem;
   margin: 5px 0;
   text-shadow: 0 0 4px #00ffff;
 }
-body.series-page .items-series p {
+
+p {
   color: #e0e0e0;
   font-size: 1rem;
   line-height: 1.5;
   text-align: justify;
 }
-body.series-page .items-series p b {
+p b {
   color: #ff0000;
 }
-body.series-page .items-series .calificacion-estrellas-alice i,
-body.series-page .items-series .calificacion-estrellas-terminal i,
-body.series-page .items-series .calificacion-estrellas-high i,
-body.series-page .items-series .calificacion-estrellas-gen i {
+
+.calificacion-estrellas-alice i,
+.calificacion-estrellas-terminal i,
+.calificacion-estrellas-high i,
+.calificacion-estrellas-gen i {
   gap: 20px;
   font-size: 1.1rem;
   margin-right: 4px;
@@ -422,14 +427,15 @@ body.series-page .items-series .calificacion-estrellas-gen i {
   text-shadow: 0 0 4px #ffd700, 0 0 8px #ffd700;
   transition: transform 0.3s, text-shadow 0.3s;
 }
-body.series-page .items-series .calificacion-estrellas-alice i:hover,
-body.series-page .items-series .calificacion-estrellas-terminal i:hover,
-body.series-page .items-series .calificacion-estrellas-high i:hover,
-body.series-page .items-series .calificacion-estrellas-gen i:hover {
+.calificacion-estrellas-alice i:hover,
+.calificacion-estrellas-terminal i:hover,
+.calificacion-estrellas-high i:hover,
+.calificacion-estrellas-gen i:hover {
   transform: scale(1.4);
   text-shadow: 0 0 10px #ffd700, 0 0 25px #ffff00, 0 0 40px #ffd700;
 }
-body.series-page .items-series iframe {
+
+iframe {
   width: 95%;
   height: 500px;
   border-radius: 15px;
@@ -437,7 +443,7 @@ body.series-page .items-series iframe {
   box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
   transition: box-shadow 0.3s, transform 0.3s;
 }
-body.series-page .items-series iframe:hover {
+iframe:hover {
   box-shadow: 0 0 30px rgba(0, 191, 255, 0.6), 0 0 60px rgba(0, 191, 255, 0.5019607843);
   transform: scale(1.02);
 }
@@ -847,10 +853,6 @@ section.bg-dark .container {
     transform: translateY(0);
   }
 }
-.bg-phantom {
-  background-color: #0d1117 !important;
-}
-
 footer .redes a, footer ul.footer-menu li a {
   color: #fff;
   text-decoration: none;

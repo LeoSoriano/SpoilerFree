@@ -182,9 +182,11 @@ aside{
 
 // ! PAGINA SERIES
 
+
 body.series-page {
 background-color: $fondo-oscuro; 
 font-family: 'Nunito', sans-serif;
+}
 
 /* Titulos Pag Series */
 .contenedor-tituloSeries,
@@ -259,7 +261,7 @@ font-family: 'Nunito', sans-serif;
     transform: translateY(-10px) rotateZ(1deg);
     box-shadow: 0 0 35px $azul-neon, 0 15px 25px $negro-brillo;
     }
-
+}
     img {
     display: block;
     margin: 0 auto;
@@ -306,7 +308,7 @@ font-family: 'Nunito', sans-serif;
     b {
         color: $rojo;
     }
-    }
+}
 
     .calificacion-estrellas-alice i,
     .calificacion-estrellas-terminal i,
@@ -338,9 +340,9 @@ font-family: 'Nunito', sans-serif;
         0 0 60px $azul-transparente;
         transform: scale(1.02);
     }
-    }
 }
-}
+
+
 
 //! PAGINA PELICULAS
 
