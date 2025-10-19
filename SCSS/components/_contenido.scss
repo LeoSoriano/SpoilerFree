@@ -84,28 +84,30 @@ box-shadow: 0 4px 20px $negro-transparente;
 .contenedor-general {
 width: 100%;
 display: flex;
-flex-wrap: wrap;
-justify-content: flex-start;
-gap: 100px;
+  flex-wrap: wrap;         // permite que los items bajen si no caben
+  justify-content: flex-start;  // alinea a la izquierda
+  gap: 75px;               // espacio entre items
 padding: 10px;
 margin-top: 25px;
+padding-left: 35px;
 
 .items {
-    background-color: $item-color; 
+    flex: 1 1 calc(25% - 25px); // 4 items por fila, descontando gap
+    max-width: 400px;            // no crecer más de 400px
+    min-width: 250px;            // no hacerse demasiado pequeño
+    background-color: #1f2937;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px $negro-transparente; 
+    box-shadow: 0 4px 12px #00000080;
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: justify;
-    width: 400px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 20px;         // separación vertical
 
     &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px $carrusel-negro;
+    box-shadow: 0 10px 25px #00000099;
     }
 
     img {
@@ -117,29 +119,27 @@ margin-top: 25px;
     }
 
     h2 {
-    color: $cyan-1;
-    font-family: c(titulos);
+    color: #00ffff;
     font-size: 1.9rem;
     margin: 0;
-    text-shadow: 0 0 5px $cyan-1, 0 0 15px $cyan-1, 0 0 25px $cyan-1;
-    transition: text-shadow 0.3s;
+    text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 25px #00ffff;
     text-align: center;
     margin-top: 25px;
     }
 
     h3 {
     font-size: 1.4rem;
-    font-family: c(titulos);
     margin-bottom: 10px;
     text-align: center;
     }
 
     p {
+    font-family: 'oswald', sans-serif;
+    font-size: 20px;
     padding: 0 15px 15px 15px;
-    font-family: c(parrafo);
 
     b {
-        color: $rojo; 
+        color: red;
     }
     }
 
@@ -152,6 +152,7 @@ margin-top: 25px;
     }
 }
 }
+
 
 /* Estrellas en Index */
 @keyframes brillar-index {
@@ -171,6 +172,35 @@ margin-left: 10px;
 
 &:hover {
     animation: brillar 0.8s forwards;
+}
+}
+
+// ================= CARRUSEL =================
+.carousel-container {
+  max-width: 60%;          // reduce el ancho total del carrusel
+  margin: 0 auto;          // centra horizontalmente
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 20px $negro-transparente;
+
+.carousel-inner {
+    img {
+      width: 100%;         // ocupa todo el ancho del contenedor
+      max-height: 400px;   // ajusta la altura a tu gusto
+    object-fit: cover;
+    border-radius: 0;
+    }
+}
+
+.carousel-caption {
+    h3 {
+    background-color: $carrusel-negro;
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: $dorado-oscuro;
+    font-family: c(titulos);
+    }
 }
 }
 

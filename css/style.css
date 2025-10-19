@@ -133,10 +133,11 @@ body.index-page h2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;          /* permite que los items bajen si no caben */
-    justify-content: center;  /* centra las filas */
-    gap: 25px;                /* espacio entre items */
+    justify-content: flex-start;  /* centra las filas */
+    gap: 75px;                /* espacio entre items */
     padding: 10px;
     margin-top: 25px;
+    padding-left: 35px;
 }
 
 .items {
@@ -183,6 +184,8 @@ body.index-page h2 {
 }
 
 .items p {
+    font-family: 'oswald', sans-serif;
+    font-size: 20px;
     padding: 0 15px 15px 15px;
 }
 
@@ -219,6 +222,31 @@ body.index-page h2 {
 .calificacion-estrellas-4fantasticos i:hover,
 .calificacion-estrellas-it i:hover {
     animation: brillar 0.8s forwards;
+}
+
+/* ================= CARRUSEL ================= */
+.carousel-container {
+  max-width: 60%;          /* reduce el ancho total del carrusel */
+  margin: 0 auto;          /* centra horizontalmente */
+border-radius: 12px;
+overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* equivalente a $negro-transparente */
+}
+
+.carousel-container .carousel-inner img {
+  width: 100%;             /* ocupa todo el ancho del contenedor */
+  max-height: 400px;       /* ajusta la altura a tu gusto */
+object-fit: cover;
+border-radius: 0;
+}
+
+.carousel-container .carousel-caption h3 {
+  background-color: rgba(0, 0, 0, 0.6); /* equivalente a $carrusel-negro */
+padding: 6px 10px;
+border-radius: 10px;
+font-size: 2rem;
+  color: #bd9b05;          /* equivalente a $dorado-oscuro */
+  font-family: 'Oswald', sans-serif; /* reemplaza c(titulos) */
 }
 
 /*================= ASIDE GENERAL =================*/
@@ -940,143 +968,220 @@ to { opacity: 1; transform: translateY(0); }
 
 /*================= RESPONSIVE INDEX =================*/
 
-/* ===== Para pantallas hasta 400px ===== */
 @media (max-width: 400px) {
-    /* Logo */
-    .logo {
-        width: 160px;
-        height: auto;
-    }
 
-    /* Navbar collapsada (hamburguesa) */
-    .navbar-collapse {
-        background-color: #1c1c1c;
-        padding: 8px 0;
-        border-radius: 8px;
-    }
+  /* Logo */
+.logo {
+    width: 180px;
+    height: auto;
+}
 
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
+  /* Navbar */
+.navbar-collapse {
+    padding: 8px 0;
+    border-radius: 6px;
 
     .navbar-nav .nav-link {
-        font-size: 1rem;
-        text-align: center;
-        padding: 5px 8px;
-        margin: 0;
+    font-size: 1rem;
+    padding: 5px 8px;
     }
 
-    .navbar .d-flex {
-        flex-direction: column;
-        width: 90%;
-        margin: 8px auto 0 auto;
-    }
+    .d-flex {
+    width: 90%;
 
-    .navbar .d-flex input,
-    .navbar .d-flex button {
+    input,
+    button {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    }
+}
+
+  /* Títulos */
+.novedad {
+    font-size: 2.2rem;
+}
+.emmys {
+    font-size: 1.6rem;
+}
+
+  /* Contenedor general (cards) */
+.contenedor-general {
+    gap: 20px;
+    padding-left: 20px; /* separación del margen izquierdo */
+    justify-content: flex-start;
+
+    .items {
+      flex: 1 1 calc(50% - 20px); /* 2 cards por fila */
+    max-width: 300px;
+
+    img,
+    iframe {
         width: 100%;
-        margin-bottom: 4px;
+        height: auto;
+        padding: 15px;
     }
 
-    /* Contenedor general */
-    .contenedor-general {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    }
+}
+
+  /* Carrusel */
+.carousel-container {
+    max-width: 80%; /* más pequeño que en desktop */
+}
+.carousel-container .carousel-inner img {
+    max-height: 300px;
+}
+.carousel-container .carousel-caption h3 {
+    font-size: 2rem;
+    padding: 6px 10px;
+}
+
+  /* Aside */
+aside {
+    width: 140px;
+    top: 300px;
+    padding: 12px;
+
+    h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    }
+
+    ul li a {
+    padding: 5px 8px;
+    }
+}
+
+  /* Footer */
+footer {
+    padding: 15px 0;
+
+    ul.footer-menu {
+    flex-direction: column;
+    gap: 15px;
+
+    li a {
+        font-size: 0.9rem;
+    }
+    }
+
+    .redes a {
+    font-size: 1rem;
+    margin: 0 4px;
+    }
+}
+}
+
+/*----------------- PARA PANTALLAS <= 350px -----------------*/
+@media (max-width: 350px) {
+
+  /* Logo */
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+  /* Títulos */
+.novedad {
+    font-size: 1.9rem;
+}
+.emmys {
+    font-size: 1.4rem;
+}
+
+.contenedor-titulo,
+.contenedor-subtitulo {
+    margin: 30px 10px 15px 10px;
+}
+
+  /* Contenedor general (cards) */
+.contenedor-general {
+    gap: 15px;
+    padding-left: 15px;
+
+    .items {
+      flex: 1 1 100%; /* 1 card por fila */
+    max-width: 100%;
+
+    img,
+    iframe {
         padding: 10px;
     }
 
-    /* Items / Cards */
-    .items, .items-series {
-        flex: 1 1 100%; /* Cada item ocupa todo el ancho */
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 5px;
+    h2 {
+        font-size: 1.4rem;
     }
 
-    .items img, .items iframe,
-    .items-series img, .items-series iframe {
-        width: 100%;
-        height: auto;
+    h3 {
+        font-size: 1.1rem;
     }
 
-    /* Carrusel */
-    .carousel-container, body.series-page .carousel {
-        max-width: 95%;
-        margin: 15px auto;
+    p {
+        font-size: 0.85rem;
     }
-
-    .carousel-inner img, body.series-page .carousel-item img {
-        width: 100%;
-        max-height: 250px;
-    }
-
-    /* Títulos */
-    .novedad { font-size: 1.6rem; }
-    .emmys { font-size: 1.3rem; }
-
-    /* Aside */
-    aside {
-        top: 250px;
-        width: 110px;
-        padding: 8px;
-    }
-
-    aside h3 { font-size: 0.9rem; }
-
-    /* Footer */
-    footer {
-        padding: 12px 8px;
-        text-align: center;
-    }
-
-    footer ul.footer-menu {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    footer ul.footer-menu li a { font-size: 0.85rem; }
-    footer .redes a {
-        font-size: 0.9rem;
-        margin: 0 3px;
     }
 }
 
-/* ===== Para pantallas aún más pequeñas (hasta 350px) ===== */
-@media (max-width: 350px) {
-    .logo {
-        width: 140px;
+  /* Carrusel */
+.carousel-container {
+    max-width: 95%;
+}
+.carousel-container .carousel-inner img {
+    max-height: 250px;
+}
+.carousel-container .carousel-caption h3 {
+    font-size: 1.8rem;
+    padding: 5px 8px;
+}
+
+  /* Aside */
+aside {
+    width: 120px;
+    top: 250px;
+    padding: 10px;
+
+    h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
     }
 
-    .navbar-nav .nav-link {
-        font-size: 0.9rem;
-    }
-
-    .items, .items-series {
-        flex: 1 1 100%;
-        padding: 4px;
-    }
-
-    .items img, .items iframe {
-        padding: 4px;
-    }
-
-    .novedad { font-size: 1.4rem; }
-    .emmys { font-size: 1.1rem; }
-
-    aside {
-        display: none; /* opcional, lo puedes mantener visible si quieres */
-    }
-
-    footer ul.footer-menu li a {
-        font-size: 0.8rem;
+    ul li a {
+    padding: 4px 6px;
     }
 }
 
-    /* Pagina series */
+  /* Footer */
+footer {
+    padding: 12px 0;
+
+    ul.footer-menu {
+    gap: 10px;
+
+    li a {
+        font-size: 0.85rem;
+    }
+    }
+
+    .redes a {
+    font-size: 0.95rem;
+    margin: 0 3px;
+    }
+}
+}
+
+/* ---------Pagina series--------- */
 
     @media (max-width: 400px) {
 
