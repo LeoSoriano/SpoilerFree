@@ -1,16 +1,15 @@
-/*=============FUENTES=================*/
+/*!---------FUENTES---------*/
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital@0;1&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Rozha+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital@0;1&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Rozha+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital@0;1&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Rozha+One&display=swap');
 
-/*================= RESET =================*/
+/*!--------------RESET---------------*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/*================= HEADER GENERAL =================*/
+/*!----------------HEADER GENERAL-------------------*/
 header {
     position: sticky;
     top: 0;
@@ -78,8 +77,7 @@ body.index-page h2 {
     text-shadow: 0 0 5px #00ffff, 0 0 15px #00bfff, 0 0 25px #00ffff; /*Sombra al texto, radio de 5px difusa, hay 3 sombras para darle ese efecto neon*/
 }
 
-/*================= TITULOS INDEX =================*/
-
+/*!----------------TITULOS INDEX-------------------*/
 .contenedor-titulo,
 .contenedor-subtitulo {
     text-align: center;
@@ -128,7 +126,7 @@ body.index-page h2 {
     }
 }
 
-/*================= Contenedores =================*/
+/*!---------------BODY INDEX--------------------*/
 .contenedor-general {
     width: 100%;
     display: flex;
@@ -192,15 +190,31 @@ body.index-page h2 {
 .items p b {
     color: red;
 }
-/*================= VIDEO INDEX =================*/
-.items iframe {
-    width: 100%;
-    max-height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-    padding: 25px;
+/* VIDEO INDEX */
+.video-wrapper {
+position: relative;
+width: 100%;
+max-width: 330px;
+margin: 20px auto;
+border-radius: 12px;
+overflow: hidden;
 }
-/*================= ESTRELLAS CON HOVER =================*/
+
+.video-wrapper iframe {
+width: 100%;
+height: 315px;
+display: block;
+border: none;
+border-radius: 12px;
+}
+
+/* Capa invisible que cubre todo el video */
+.video-overlay {
+position: absolute;
+  inset: 0; /* ocupa todo el contenedor */
+z-index: 2;
+}
+/* ESTRELLAS CON HOVER */
 @keyframes brillar {
     0%, 100% { transform: scale(1); color: #ffd700; }
     50% { transform: scale(1.3); color: #ffea00; }
@@ -224,7 +238,7 @@ body.index-page h2 {
     animation: brillar 0.8s forwards;
 }
 
-/* ================= CARRUSEL ================= */
+/* CARRUSEL */
 .carousel-container {
   max-width: 60%;          /* reduce el ancho total del carrusel */
   margin: 0 auto;          /* centra horizontalmente */
@@ -249,7 +263,7 @@ font-size: 2rem;
   font-family: 'Oswald', sans-serif; /* reemplaza c(titulos) */
 }
 
-/*================= ASIDE GENERAL =================*/
+/*!----------------ASIDE GENERAL------------------*/
 aside {
     position: fixed;
     right: 15px;
@@ -301,8 +315,7 @@ aside ul li a:hover {
     color: #fff;
 }
 
-
-/*================= FOOTER GENERAL =================*/
+/*!----------------FOOTER GENERAL------------------*/
 footer {
     background-color: #222;
     color: #fff;
@@ -345,9 +358,9 @@ footer .redes a:hover {
     color: #0d6efd;
 }
 
-/* =========================== ESTILOS EXCLUSIVOS PARA series.html =========================== */
+/*!---------PAGINA SERIES.html-----------------------*/
 
-/* ===== ANIMACIONES ===== */
+/* ANIMACIONES */
 @keyframes slideDown {
     from { transform: translateY(-30px); opacity: 0; }
     to   { transform: translateY(0); opacity: 1; }
@@ -364,13 +377,13 @@ footer .redes a:hover {
     100% { background-position: 0% 50%; }
 }
 
-/* ===== BODY SERIES ===== */
+/* BODY SERIES */
 body.series-page {
     background-color: #0d1117;
     font-family: 'Nunito', sans-serif;
 }
 
-/* ===== TITULOS ===== */
+/* TITULOS */
 body.series-page .contenedor-tituloSeries,
 body.series-page .contenedor-subtitulo2 {
     text-align: center;
@@ -390,7 +403,7 @@ body.series-page .estreno {
     text-shadow: 0 0 15px #ff0040, 0 0 30px #ff0040;
 }
 
-/* ===== CARRUSEL SERIES ===== */
+/* CARRUSEL SERIES */
 body.series-page .carousel {
     width: 80%;
     margin: 40px auto;
@@ -412,7 +425,6 @@ body.series-page .carousel-item img:hover {
     box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
 }
 
-/* ===== CONTENIDO PRINCIPAL / FONDO DINÁMICO SERIES===== */
 body.series-page .contenido-principal {
     background: #1f2937 ;
     background-size: 400% 400%;
@@ -423,7 +435,6 @@ body.series-page .contenido-principal {
     max-width: 1300px;
 }
 
-/* ===== CARDS SERIES ===== */
 body.series-page .items-series {
     display: flex;
     flex-direction: column; /* Cambiar a 'row' para horizontal */
@@ -484,7 +495,6 @@ body.series-page .items-series h3 {
     text-shadow: 0 0 4px #00ffff;
 }
 
-/* Párrafos */
 body.series-page .items-series p {
     color: #e0e0e0;
     font-size: 1rem;
@@ -532,7 +542,8 @@ body.series-page .items-series iframe:hover {
     transform: scale(1.02);
 }
 
-/*---------PAGINA PELICULAS---------*/
+
+/*!-------PAGINA PELICULAS.html-----------*/
 
 /* Título principal  */
 .MovieNew {
@@ -559,7 +570,7 @@ body.series-page .items-series iframe:hover {
     100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* ===== GRID PRINCIPAL ===== */
+/*  GRID PRINCIPAL  */
 .grid-peliculas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -570,7 +581,7 @@ body.series-page .items-series iframe:hover {
     background: linear-gradient(-45deg, #0d1117, #1c1c1c, #001f3f, #0d1117);
 }
 
-/* ===== CARDS DE IMÁGENES ===== */
+/* CARDS DE IMÁGENES */
 .card-imagenes {
     background-color: #141414e6;
     border-radius: 12px;
@@ -593,7 +604,7 @@ body.series-page .items-series iframe:hover {
     margin-bottom: 10px;
 }
 
-/* ===== CARD-GALLERY IMG ===== */
+/* CARD-GALLERY IMG  */
 .card-gallery img {
     width: 80px;
     height: 120px;
@@ -608,7 +619,7 @@ body.series-page .items-series iframe:hover {
     box-shadow: 0 0 20px #00bfff4d;
 }
 
-/* ===== CARDS DE VIDEO ===== */
+/* CARDS DE VIDEO */
 .card-video {
     background-color: #141414f2;
     border-radius: 12px;
@@ -649,7 +660,7 @@ body.series-page .items-series iframe:hover {
     box-shadow: none;
 }
 
-/* ===== CARD GRANDE ===== */
+/* CARD GRANDE */
 .card-video-grande {
     grid-column: 1 / span 3;
     background-color: #141414f2;
@@ -678,7 +689,7 @@ body.series-page .items-series iframe:hover {
     text-shadow: 0 0 5px #00ffff, 0 0 10px #00bfff;
 }
 
-/* ===== ANIMACIÓN DE APARICIÓN ===== */
+/* ANIMACIÓN DE APARICIÓN */
 @keyframes aparecer {
     to {
         opacity: 1;
@@ -686,7 +697,7 @@ body.series-page .items-series iframe:hover {
     }
 }
 
-/* ===== ANIMACIÓN DE ENTRADA SECUENCIAL ===== */
+/* ANIMACIÓN DE ENTRADA SECUENCIAL */
 .card-imagenes:nth-child(1),
 .card-video:nth-child(1),
 .card-video-grande:nth-child(1) { animation-delay: 0.2s; }
@@ -699,7 +710,7 @@ body.series-page .items-series iframe:hover {
 .card-video:nth-child(3),
 .card-video-grande:nth-child(3) { animation-delay: 0.6s; }
 
-/*---------PAGINA TRAILER-------*/
+/*!--------PAGINA TRAILERS-------*/
 
 section.bg-dark {
 background: radial-gradient(circle at top, #0a0a0a 0%, #000 50%, #090909 100%);
@@ -728,7 +739,7 @@ position: relative;
 z-index: 2;
 }
 
-/* === TÍTULOS === */
+/*  TÍTULOS  */
 .TrailerNew {
   color: #00bfff; /* color base */
   font-size: 3rem; /* ajusta a tu gusto */
@@ -771,7 +782,7 @@ margin-bottom: 15px;
 animation: glowRedPulse 2s infinite ease-in-out;
 }
 
-/* === CARRUSEL === */
+/* CARRUSEL */
 
 .carousel-inner img {
 width: 100%;
@@ -781,9 +792,6 @@ border-radius: 15px;
 box-shadow: 0 0 15px #00bfff, 0 0 25px #00ffff; 
 }
 
-/*---Video---*/
-
-/* Indicadores personalizados */
 .carousel-indicators [data-bs-target] {
 background-color: #ff0040;
 width: 10px;
@@ -795,6 +803,7 @@ border-radius: 50%;
 .carousel-control-next-icon {
 filter: drop-shadow(0 0 8px #ff0040);
 }
+
 /* Trailer grande */
 
 .ratio iframe {
@@ -809,7 +818,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 25px #00bfff, 0 0 50px #00ffff; /* glow más intenso */
 }
 
-/* === BOTONES DE FILTRO === */
+/*  BOTONES DE FILTRO  */
 .btn-outline-light {
 border: 1px solid #00ffff;
 color: #fff;
@@ -822,7 +831,7 @@ color: #fff;
 box-shadow: 0 0 15px #00bfff, 0 0 25px #00ffff; 
 }
 
-/* === GALERÍA DE TRÁILERS === */
+/* GALERÍA DE TRÁILERS */
 .galeria-trailers-scroll .col-md-4 {
   display: flex;          /* hace que la columna sea flex */
 }
@@ -874,10 +883,8 @@ background-color: #ff3366;
 box-shadow: 0 0 25px #ff0040, 0 0 50px #ff3366;
 transform: scale(1.05);
 }
-/*--------- PÁGINA CONTACTO ---------*/
 
-/* ====== Estilos generales ====== */
-
+/*!--------PAGINA CONTACTO-----------*/
 
 .seccion-contacto {
 position: relative;
@@ -953,7 +960,7 @@ box-shadow: 0 0 25px #ff0040, 0 0 60px #ff3366;
 transform: scale(1.05);
 }
 
-/* ====== Animaciones ====== */
+/* Animaciones */
 @keyframes brillar {
 0% { text-shadow: 0 0 10px #ff0040; }
 100% { text-shadow: 0 0 30px #ff0040, 0 0 60px #ff0040; }
@@ -964,19 +971,17 @@ from { opacity: 0; transform: translateY(30px); }
 to { opacity: 1; transform: translateY(0); }
 }
 
-/*--------RESPONSIVE MOVILE------*/
+/*!-------------------------RESPONSIVE MOVILE--------------------------*/
 
-/*================= RESPONSIVE INDEX =================*/
+/*!-----------RESPONSIVE PAGINA INDEX--------*/
 
 @media (max-width: 400px) {
 
-  /* Logo */
 .logo {
     width: 180px;
     height: auto;
 }
 
-  /* Navbar */
 .navbar-collapse {
     padding: 8px 0;
     border-radius: 6px;
@@ -997,7 +1002,6 @@ to { opacity: 1; transform: translateY(0); }
     }
 }
 
-  /* Títulos */
 .novedad {
     font-size: 2.2rem;
 }
@@ -1005,14 +1009,13 @@ to { opacity: 1; transform: translateY(0); }
     font-size: 1.6rem;
 }
 
-  /* Contenedor general (cards) */
 .contenedor-general {
     gap: 20px;
-    padding-left: 20px; /* separación del margen izquierdo */
+    padding-left: 20px; 
     justify-content: flex-start;
 
     .items {
-      flex: 1 1 calc(50% - 20px); /* 2 cards por fila */
+    flex: 1 1 calc(50% - 20px); 
     max-width: 300px;
 
     img,
@@ -1033,12 +1036,19 @@ to { opacity: 1; transform: translateY(0); }
     p {
         font-size: 0.9rem;
     }
+    .video-wrapper {
+        max-width: 280px;
+        margin: 15px auto;
+
+        iframe {
+        height: 250px;
+        }
+    }
     }
 }
 
-  /* Carrusel */
 .carousel-container {
-    max-width: 80%; /* más pequeño que en desktop */
+    max-width: 80%; 
 }
 .carousel-container .carousel-inner img {
     max-height: 300px;
@@ -1048,7 +1058,6 @@ to { opacity: 1; transform: translateY(0); }
     padding: 6px 10px;
 }
 
-  /* Aside */
 aside {
     width: 140px;
     top: 300px;
@@ -1064,7 +1073,6 @@ aside {
     }
 }
 
-  /* Footer */
 footer {
     padding: 15px 0;
 
@@ -1084,16 +1092,13 @@ footer {
 }
 }
 
-/*----------------- PARA PANTALLAS <= 350px -----------------*/
 @media (max-width: 350px) {
 
-  /* Logo */
 .logo {
     width: 150px;
     height: auto;
 }
 
-  /* Títulos */
 .novedad {
     font-size: 1.9rem;
 }
@@ -1106,7 +1111,6 @@ footer {
     margin: 30px 10px 15px 10px;
 }
 
-  /* Contenedor general (cards) */
 .contenedor-general {
     gap: 15px;
     padding-left: 15px;
@@ -1117,6 +1121,8 @@ footer {
 
     img,
     iframe {
+        width: 100%;
+        height: auto;
         padding: 10px;
     }
 
@@ -1125,16 +1131,22 @@ footer {
     }
 
     h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     p {
         font-size: 0.85rem;
     }
+    .video-wrapper {
+        max-width: 250px;
+        margin: 10px auto;
+
+        iframe {
+        height: 220px;
+        }
+    }
     }
 }
-
-  /* Carrusel */
 .carousel-container {
     max-width: 95%;
 }
@@ -1146,7 +1158,6 @@ footer {
     padding: 5px 8px;
 }
 
-  /* Aside */
 aside {
     width: 120px;
     top: 250px;
@@ -1162,7 +1173,6 @@ aside {
     }
 }
 
-  /* Footer */
 footer {
     padding: 12px 0;
 
@@ -1181,11 +1191,10 @@ footer {
 }
 }
 
-/* ---------Pagina series--------- */
+/*!------------------------RESPONSIVE PAGINA SERIES------------------------ */
 
     @media (max-width: 400px) {
 
-    /* TITULOS SERIES */
     body.series-page .seriesNew {
         font-size: 2.2rem;
     }
@@ -1199,7 +1208,6 @@ footer {
         margin: 30px 15px 15px 15px;
     }
 
-    /* CARRUSEL */
     body.series-page .carousel {
         width: 95%;
         margin: 20px auto;
@@ -1209,14 +1217,12 @@ footer {
         max-height: 200px;
     }
 
-    /* CONTENIDO PRINCIPAL */
     body.series-page .contenido-principal {
         padding: 30px 15px;
         border-radius: 15px;
         max-width: 95%;
     }
 
-    /* ITEMS SERIES */
     body.series-page .items-series {
         height: auto;
         padding: 15px;
@@ -1254,10 +1260,8 @@ footer {
     }
 }
 
-/* =========================== ESTILOS RESPONSIVE PAGINA SERIES 350px =========================== */
 @media (max-width: 350px) {
 
-    /* TITULOS SERIES */
     body.series-page .seriesNew {
         font-size: 2rem;
     }
@@ -1271,7 +1275,6 @@ footer {
         margin: 20px 10px 10px 10px;
     }
 
-    /* CARRUSEL */
     body.series-page .carousel {
         width: 100%;
         margin: 15px auto;
@@ -1281,14 +1284,12 @@ footer {
         max-height: 180px;
     }
 
-    /* CONTENIDO PRINCIPAL */
     body.series-page .contenido-principal {
         padding: 20px 10px;
         border-radius: 12px;
         max-width: 100%;
     }
 
-    /* ITEMS SERIES */
     body.series-page .items-series {
         height: auto;
         padding: 10px;
@@ -1326,7 +1327,7 @@ footer {
     }
 }
 
-/*------------PAGINA PELICULAS--------*/
+/*!------------RESPONSIVE PAGINA PELICULAS--------------------*/
 
 @media (max-width: 400px) {
     .MovieNew { font-size: 3rem; letter-spacing: 2px; }
@@ -1344,110 +1345,129 @@ footer {
     .card-video p { font-size: 13px; }
 }
 
+/*!-----------RESPONSIVE PAGINA TRAILERS----------*/
 
-/*--------- PÁGINA TRAILER ---------*/
-/* ===== MEDIA QUERY 400px ===== */
+
 @media (max-width: 400px) {
-  /* Títulos */
-.TrailerNew { font-size: 2.2rem; }
-.MakerTitle { font-size: 1.5rem; }
-
-  /* Carrusel */
-.carousel-inner img { height: 350px; }
-
-  /* Video grande */
-.ratio iframe { height: 250px; }
-
-  /* Galería trailers */
-.galeria-trailers-scroll .card-img { height: 140px; }
-.galeria-trailers-scroll .card-body { padding: 5px; }
-
-  /* Botón Play */
-.card-img-overlay a.btn-danger { font-size: 0.85rem; padding: 4px 8px; }
-
-  /* Cards generales */
-.galeria-trailers-scroll .card { margin-bottom: 10px; }
+.TrailerNew {
+    font-size: 2rem; 
 }
 
-/* ===== MEDIA QUERY 350px ===== */
+.MakerTitle {
+    font-size: 1.4rem; 
+}
+
+.carousel-inner img {
+    height: 350px; 
+}
+
+.ratio iframe {
+    height: 250px; 
+}
+
+.galeria-trailers-scroll .card-img {
+    height: 140px;
+}
+
+.galeria-trailers-scroll .card {
+    font-size: 0.9rem; 
+}
+
+.btn-outline-light {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+}
+
+.card-img-overlay a.btn-danger {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+}
+}
+
+
 @media (max-width: 350px) {
-  /* Títulos */
-.TrailerNew { font-size: 1.9rem; }
-.MakerTitle { font-size: 1.3rem; }
 
-  /* Carrusel */
-.carousel-inner img { height: 280px; }
-
-  /* Video grande */
-.ratio iframe { height: 220px; }
-
-  /* Galería trailers */
-.galeria-trailers-scroll .card-img { height: 120px; }
-.galeria-trailers-scroll .card-body { padding: 3px; }
-
-  /* Botón Play */
-.card-img-overlay a.btn-danger { font-size: 0.75rem; padding: 3px 6px; }
-
-  /* Cards generales */
-.galeria-trailers-scroll .card { margin-bottom: 8px; }
+.TrailerNew {
+    font-size: 1.6rem; 
 }
 
-/* ================= MEDIA QUERIES ================= */
+.MakerTitle {
+    font-size: 1.2rem; 
+}
 
-/* ----- Pantallas <= 400px ----- */
+.carousel-inner img {
+    height: 300px; 
+}
+
+.ratio iframe {
+    height: 200px; 
+}
+
+.galeria-trailers-scroll .card-img {
+    height: 120px;
+}
+
+.galeria-trailers-scroll .card {
+    font-size: 0.8rem; 
+}
+
+.btn-outline-light {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+}
+
+.card-img-overlay a.btn-danger {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+}
+}
+
+
+/*!-------------RESPONSIVE PAGINA CONTACTO------------*/
+
 @media (max-width: 400px) {
-.titulo-contacto {
-    font-size: 2.3rem;
-    letter-spacing: 1.5px;
-}
 
-.descripcion-contacto {
-    font-size: 0.9rem;
-    padding: 0 10px;
+.titulo-contacto {
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .formulario-contacto {
     max-width: 90%;
-    height: auto;
-    padding: 20px;
+    height: 600px;
 }
 
 .form-control {
     font-size: 0.9rem;
-    padding: 6px 8px;
+    padding: 8px;
 }
 
 .btn-enviar {
     font-size: 0.9rem;
-    padding: 8px 20px;
+    padding: 10px 20px;
 }
 }
 
-/* ----- Pantallas <= 350px ----- */
+
 @media (max-width: 350px) {
-.titulo-contacto {
-    font-size: 1.9rem;
-    letter-spacing: 1px;
-}
 
-.descripcion-contacto {
-    font-size: 0.85rem;
-    padding: 0 8px;
+.titulo-contacto {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
 }
 
 .formulario-contacto {
     max-width: 95%;
-    height: auto;
-    padding: 15px;
+    height: 550px;
 }
 
 .form-control {
     font-size: 0.85rem;
-    padding: 5px 6px;
+    padding: 7px;
 }
 
 .btn-enviar {
     font-size: 0.85rem;
-    padding: 6px 16px;
+    padding: 8px 16px;
 }
 }
