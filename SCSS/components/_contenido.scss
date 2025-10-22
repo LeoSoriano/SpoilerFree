@@ -82,16 +82,16 @@ box-shadow: 0 4px 20px $negro-transparente;
 
 // ! BODY INDEX
 .contenedor-general {
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-start;
-  gap: 25px;            // espacio entre contenedores
-padding: 10px 35px;
-margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;           // permite que los items bajen si no caben
+  justify-content: flex-start;
+  gap: 75px;                 // espacio entre items
+  padding: 10px 0 0 35px;
+  margin-top: 25px;
 
-.items {
-    flex: 1 1 calc(25% - 20px); // 4 contenedores por fila
+  .items {
+    flex: 1 1 calc(25% - 25px); // 4 items por fila, descontando gap
     max-width: 400px;
     min-width: 250px;
     background-color: $item-color;
@@ -99,73 +99,74 @@ margin-top: 25px;
     overflow: hidden;
     box-shadow: 0 4px 12px $negro-transparente;
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: justify;
     display: flex;
     flex-direction: column;
-    text-align: justify;
     margin-bottom: 20px;
 
     &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px $carrusel-negro;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px $carrusel-negro;
     }
 
     img {
-    width: 95%;
-    height: 380px;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    padding: 25px;
+      width: 95%;
+      height: 380px;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      padding: 25px;
     }
 
     h2 {
-    font-family: c(titulos);
-    color: $cyan-1;
-    font-size: 1.9rem;
-    margin: 25px 0 0 0;
-    text-shadow: 0 0 5px $cyan-1, 0 0 15px $cyan-1, 0 0 25px $cyan-1;
-    text-align: center;
+      color: $cyan-1;
+      font-size: 1.9rem;
+      margin: 25px 0 0 0;
+      text-shadow: 0 0 5px $cyan-1, 0 0 15px $cyan-1, 0 0 25px $cyan-1;
+      text-align: center;
     }
 
     h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      text-align: center;
     }
 
     p {
-    font-family: C(Nunito);
-    font-size: 20px;
-    padding: 0 15px 15px 15px;
+      font-family: c(parrafo);
+      font-size: 20px;
+      padding: 0 15px 15px 15px;
 
-    b {
+      b {
         color: $rojo;
+      }
     }
-    }
+  }
 }
-     // ===== VIDEO WRAPPER =====
-    .video-wrapper {
-    position: relative;
+
+/*================= VIDEO INDEX =================*/
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  margin: 20px auto;
+  border-radius: 12px;
+  overflow: hidden;
+
+  iframe {
     width: 100%;
-    max-width: 330px;
-    margin: 20px auto;
+    height: 315px;
+    display: block;
+    border: none;
     border-radius: 12px;
-    overflow: hidden;
+  }
 
-    iframe {
-        width: 100%;
-        height: 315px;
-        display: block;
-        border: none;
-        border-radius: 12px;
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
 }
 
-    .video-overlay {
-        position: absolute;
-        inset: 0; // ocupa todo el contenedor
-        z-index: 2;
-    }
-    }
-}
 
 
 /* Estrellas en Index */
