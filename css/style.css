@@ -985,211 +985,228 @@ to { opacity: 1; transform: translateY(0); }
 .navbar-collapse {
     padding: 8px 0;
     border-radius: 6px;
+}
 
-    .navbar-nav .nav-link {
+.navbar-collapse .navbar-nav .nav-link {
     font-size: 1rem;
     padding: 5px 8px;
-    }
+}
 
-    .d-flex {
+.navbar-collapse .d-flex {
     width: 90%;
+}
 
-    input,
-    button {
-        font-size: 0.9rem;
-        padding: 6px;
-    }
-    }
+.navbar-collapse .d-flex input,
+.navbar-collapse .d-flex button {
+    font-size: 0.9rem;
+    padding: 6px;
 }
 
 .novedad {
     font-size: 2.2rem;
 }
+
 .emmys {
     font-size: 1.6rem;
 }
 
 .contenedor-general {
-    gap: 20px;
-    padding-left: 20px; 
-    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+    align-items: center;    /* centra los bloques */
+    padding-left: 0;
+    gap: 25px;              /* menos espacio entre secciones */
+}
 
-    .items {
-    flex: 1 1 calc(50% - 20px); 
-    max-width: 300px;
+h2 {
+    font-size: 1.6rem;
+}
 
-    img,
-    iframe {
-        width: 100%;
-        height: auto;
-        padding: 15px;
-    }
+h3 {
+    font-size: 1.2rem;
+}
 
-    h2 {
-        font-size: 1.6rem;
-    }
+p {
+    font-size: 0.9rem;
+}
 
-    h3 {
-        font-size: 1.2rem;
-    }
+.video-wrapper {
+    max-width: 280px;
+    margin: 15px auto;
+}
 
-    p {
-        font-size: 0.9rem;
-    }
-    .video-wrapper {
-        max-width: 280px;
-        margin: 15px auto;
-
-        iframe {
-        height: 250px;
-        }
-    }
-    }
+.video-wrapper iframe {
+    height: 250px;
 }
 
 .carousel-container {
-    max-width: 80%; 
+    max-width: 80%;
 }
+
 .carousel-container .carousel-inner img {
     max-height: 300px;
 }
+
 .carousel-container .carousel-caption h3 {
     font-size: 2rem;
     padding: 6px 10px;
 }
 
 aside {
-    width: 140px;
-    top: 300px;
+    position: static; /* deja que fluya en el layout */
+    width: 100%;      /* ocupa todo el ancho */
     padding: 12px;
+    margin-top: 20px; /* separación del contenido superior */
+}
 
-    h3 {
+aside h3 {
     font-size: 1rem;
     margin-bottom: 10px;
-    }
+    text-align: center; /* centra el título */
+}
 
-    ul li a {
+aside ul li a {
     padding: 5px 8px;
-    }
+    display: block;    /* cada enlace en su propia línea */
+    text-align: center; /* centra el texto */
 }
 
 footer {
     padding: 15px 0;
+}
 
-    ul.footer-menu {
+footer ul.footer-menu {
     flex-direction: column;
     gap: 15px;
+}
 
-    li a {
-        font-size: 0.9rem;
-    }
-    }
+footer ul.footer-menu li a {
+    font-size: 0.9rem;
+}
 
-    .redes a {
+footer .redes a {
     font-size: 1rem;
     margin: 0 4px;
-    }
 }
 }
 
 @media (max-width: 350px) {
 
 .logo {
-    width: 150px;
+    width: 160px;
     height: auto;
 }
 
-.novedad {
-    font-size: 1.9rem;
+.navbar-collapse {
+    padding: 6px 0;
+    border-radius: 6px;
 }
+
+.navbar-collapse .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    padding: 4px 6px;
+}
+
+.navbar-collapse .d-flex {
+    width: 90%;
+}
+
+.navbar-collapse .d-flex input,
+.navbar-collapse .d-flex button {
+    font-size: 0.8rem;
+    padding: 5px;
+}
+
+.novedad {
+    font-size: 2rem;
+}
+
 .emmys {
     font-size: 1.4rem;
 }
 
-.contenedor-titulo,
-.contenedor-subtitulo {
-    margin: 30px 10px 15px 10px;
-}
-
 .contenedor-general {
-    gap: 15px;
-    padding-left: 15px;
-
-    .items {
-      flex: 1 1 100%; /* 1 card por fila */
-    max-width: 100%;
-
-    img,
-    iframe {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 0.85rem;
-    }
-    .video-wrapper {
-        max-width: 250px;
-        margin: 10px auto;
-
-        iframe {
-        height: 220px;
-        }
-    }
-    }
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* apila los elementos verticalmente */
+    align-items: center;    /* centra los bloques */
+    padding-left: 0;
+    gap: 20px;              /* menos espacio entre secciones */
 }
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 0.85rem;
+}
+
+.video-wrapper {
+    max-width: 240px;
+    margin: 12px auto;
+}
+
+.video-wrapper iframe {
+    height: 220px;
+}
+
 .carousel-container {
-    max-width: 95%;
+    max-width: 90%;
 }
+
 .carousel-container .carousel-inner img {
     max-height: 250px;
 }
+
 .carousel-container .carousel-caption h3 {
     font-size: 1.8rem;
     padding: 5px 8px;
 }
 
 aside {
-    width: 120px;
-    top: 250px;
+    position: static; /* deja que fluya en el layout */
+    width: 100%;      /* ocupa todo el ancho */
     padding: 10px;
+    margin-top: 15px; /* separación del contenido superior */
+}
 
-    h3 {
-    font-size: 0.9rem;
+aside h3 {
+    font-size: 0.95rem;
     margin-bottom: 8px;
-    }
+    text-align: center; /* centra el título */
+}
 
-    ul li a {
+aside ul li a {
     padding: 4px 6px;
-    }
+    display: block;     /* cada enlace en su propia línea */
+    text-align: center; /* centra el texto */
 }
 
 footer {
     padding: 12px 0;
+}
 
-    ul.footer-menu {
-    gap: 10px;
+footer ul.footer-menu {
+    flex-direction: column;
+    gap: 12px;
+}
 
-    li a {
-        font-size: 0.85rem;
-    }
-    }
+footer ul.footer-menu li a {
+    font-size: 0.85rem;
+}
 
-    .redes a {
+footer .redes a {
     font-size: 0.95rem;
     margin: 0 3px;
-    }
 }
 }
+
 
 /*!------------------------RESPONSIVE PAGINA SERIES------------------------ */
 

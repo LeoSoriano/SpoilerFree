@@ -391,52 +391,37 @@ font-family: 'Nunito', sans-serif;
 
 //! PAGINA PELICULAS
 
-/* Título principal  */
-.MovieNew {
-font-family: c(titulo-especial);
-font-size: 4rem;
-color: $rojo-fuego;
-text-align: center;
-letter-spacing: 4px;
-text-shadow: 0 0 15px $rojo-fuego, 0 0 30px $rojo-fuego;
-opacity: 0;
-animation: aparecerTitulo 1.5s ease-out forwards,
-            brillar 2s ease-in-out infinite alternate;
+body.peliculas-page {
 
-@keyframes brillar {
-    from { text-shadow: 0 0 10px $rojo-fuego, 0 0 20px $rojo-fuego; }
-    to { text-shadow: 0 0 40px $rojo-fuego, 0 0 80px $rojo-fuego; }
+  .MovieNew {                                   /* ===== TÍTULO PRINCIPAL ===== */
+    font-family: c(titulo-especial);
+    font-size: 4rem;
+    color: $rojo-fuego;
+    text-align: center;
+    letter-spacing: 4px;
+    @include animacion-titulo($rojo-fuego);
 }
 
-@keyframes aparecerTitulo {
-    0% { opacity: 0; transform: translateY(-50px) scale(0.8); }
-    60% { opacity: 1; transform: translateY(10px) scale(1.05); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-}
-
-/* ===== GRID PRINCIPAL ===== */
+  /* ===== GRID PRINCIPAL ===== */
 .grid-peliculas {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 35px;
-padding: 50px;
-width: 85%;
-margin: 0 auto;
-background: linear-gradient(-45deg, $fondo-oscuro, $gris-oscuro1, $azul-profundo, $fondo-oscuro);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 50px;
+    width: 85%;
+    margin: 0 auto;
+    background: linear-gradient(-45deg, $fondo-oscuro, $gris-oscuro1, $azul-profundo, $fondo-oscuro);
 
-.card-imagenes,
-.card-video,
-.card-video-grande {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: aparecer 0.8s ease forwards;
+    .card-imagenes,
+    .card-video,
+    .card-video-grande {
+    @include animacion-aparecer;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:nth-child(1) { animation-delay: 0.2s; }
     &:nth-child(2) { animation-delay: 0.4s; }
     &:nth-child(3) { animation-delay: 0.6s; }
+    }
 }
 
   /* ===== CARDS DE IMÁGENES ===== */
@@ -444,22 +429,15 @@ background: linear-gradient(-45deg, $fondo-oscuro, $gris-oscuro1, $azul-profundo
     background-color: $negro-card-e6;
     padding: 10px;
     text-align: center;
-
-    &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px $azul-claro, 0 0 25px $cyan-1;
-    }
+    @include hover-glow(1.1, 15px $azul-claro, 25px $cyan-1);
 
     h3 {
     color: #00bfff;
-    text-shadow: 0 0 10px $azul-claro, 0 0 20px $cyan-1, 0 0 30px $cyan-1;
+    @include glow-text($azul-claro, 10px, 20px, 30px);
     margin-bottom: 10px;
     }
-}
 
-  /* Card-gallery img */
-.card-gallery {
-    img {
+    .card-gallery img {
     width: 80px;
     height: 120px;
     object-fit: cover;
@@ -480,11 +458,7 @@ background: linear-gradient(-45deg, $fondo-oscuro, $gris-oscuro1, $azul-profundo
     padding: 15px;
     box-shadow: 0 0 20px $azul-shadow-33;
     color: $gris-muy-claro;
-
-    &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px $azul-claro, 0 0 25px $cyan-1;
-    }
+    @include hover-glow(1.1, 15px $azul-claro, 25px $cyan-1);
 
     h3 {
     color: $cyan-1;
@@ -517,6 +491,7 @@ background: linear-gradient(-45deg, $fondo-oscuro, $gris-oscuro1, $azul-profundo
     background-color: $negro-card-f2;
     padding: 15px;
     box-shadow: 0 0 25px $azul-shadow-33;
+    @include hover-glow(1.1, 15px $azul-claro, 25px $cyan-1);
 
     iframe {
     width: 100%;
@@ -525,21 +500,9 @@ background: linear-gradient(-45deg, $fondo-oscuro, $gris-oscuro1, $azul-profundo
     box-shadow: none;
     }
 
-    &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px $azul-claro, 0 0 25px $cyan-1;
-    }
-
     h3 {
     color: $cyan-1;
     text-shadow: 0 0 5px $cyan-1, 0 0 10px $azul-claro;
-    }
-}
-
-@keyframes aparecer {
-    to {
-    opacity: 1;
-    transform: translateY(0);
     }
 }
 }

@@ -78,3 +78,60 @@ ul {
 }
 }
 
+//! PAGINA PELICULAS
+
+/* ================= VARIABLES ================= */
+$duracion-aparecer: 0.8s;
+$duracion-titulo: 1.5s;
+
+/* ================= MIXINS ================= */
+
+/* Mixin para animaciones de aparición */
+@mixin animacion-aparecer($duracion: $duracion-aparecer, $tipo: ease) {
+opacity: 0;
+transform: translateY(30px);
+animation: aparecer $duracion $tipo forwards;
+}
+
+/* Mixin para animaciones de título con brillo */
+@mixin animacion-titulo($color) {
+opacity: 0;
+animation: aparecerTitulo $duracion-titulo ease-out forwards,
+            brillar 2s ease-in-out infinite alternate;
+text-shadow: 0 0 15px $color, 0 0 30px $color;
+}
+
+/* Mixin para hover con glow */
+@mixin hover-glow($scale: 1.1, $shadow1, $shadow2) {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+&:hover {
+    transform: scale($scale);
+    box-shadow: 0 0 $shadow1, 0 0 $shadow2;
+}
+}
+
+/* Mixin para text-shadow de glow */
+@mixin glow-text($color, $intensidad1, $intensidad2, $intensidad3: null) {
+text-shadow: 0 0 $intensidad1 $color, 0 0 $intensidad2 $color
+    #{if($intensidad3 != null, ', 0 0 ' + $intensidad3 + ' ' + $color, '')};
+}
+
+/* ================= KEYFRAMES ================= */
+@keyframes aparecer {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes brillar {
+from { text-shadow: 0 0 10px $rojo-fuego, 0 0 20px $rojo-fuego; }
+to   { text-shadow: 0 0 40px $rojo-fuego, 0 0 80px $rojo-fuego; }
+}
+
+@keyframes aparecerTitulo {
+0%   { opacity: 0; transform: translateY(-50px) scale(0.8); }
+60%  { opacity: 1; transform: translateY(10px) scale(1.05); }
+100% { opacity: 1; transform: translateY(0) scale(1); }
+}
