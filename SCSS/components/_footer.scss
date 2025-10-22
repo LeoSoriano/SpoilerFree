@@ -25,30 +25,47 @@
 }
 
 
+footer {
+background-color: $gris-carbon;
+color: $texto-blanco;
+padding: 20px 0;
+font-family: c(pie);
+
 .contenedor-pie {
-display: flex;
-  flex-direction: column; // apila elementos verticalmente
-  align-items: center;    // centra horizontalmente
-text-align: center;
-  gap: 10px;              // espacio entre elementos
+    display: flex;
+    flex-direction: column; // apila verticalmente
+    align-items: center;    // centra horizontalmente
+    text-align: center;
+    gap: 10px;
 }
 
 .contenedor-pie p {
-  margin: 0;              // elimina márgenes que desalinean
+    margin: 0;
 }
 
 ul.footer-menu {
-@extend %footer-menu;
-padding: 0;
-margin: 0;
-li a {
-    @extend %footer-link;
-}
+    @extend %footer-menu;
+    display: flex;           // cambia a flex para alinear elementos horizontalmente
+    justify-content: center; // centra los <li> dentro del ul
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0 10px;        // espacio entre enlaces
+    a {
+        @extend %footer-link;
+    }
+    }
 }
 
-.redes a {
-@extend %footer-link;
-margin: 0 5px;
-font-size: 1.2rem;
+.redes {
+    display: flex;           // centra los íconos horizontalmente
+    justify-content: center;
+    gap: 10px;
+    a {
+    @extend %footer-link;
+    font-size: 1.2rem;
+    }
+}
 }
 
