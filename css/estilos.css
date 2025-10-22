@@ -908,16 +908,16 @@ section.bg-dark .container {
     transform: translateY(0);
   }
 }
-footer .redes a, footer ul.footer-menu li a {
+.redes a, ul.footer-menu li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
-footer .redes a:hover, footer ul.footer-menu li a:hover {
+.redes a:hover, ul.footer-menu li a:hover {
   color: #0d6efd;
 }
 
-footer ul.footer-menu {
+ul.footer-menu {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -926,17 +926,23 @@ footer ul.footer-menu {
   margin-bottom: 10px;
 }
 
-footer {
-  background-color: #222;
-  color: #fff;
-  padding: 20px 0;
+.contenedor-pie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  font-family: c(pie);
+  gap: 10px;
 }
-footer p {
-  margin-bottom: 10px;
+
+.contenedor-pie p {
+  margin: 0;
 }
-footer .redes a {
+
+ul.footer-menu {
+  padding: 0;
+  margin: 0;
+}
+.redes a {
   margin: 0 5px;
   font-size: 1.2rem;
 }
