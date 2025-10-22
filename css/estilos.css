@@ -936,6 +936,7 @@ footer .contenedor-pie {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   gap: 10px;
 }
@@ -947,9 +948,7 @@ footer ul.footer-menu {
   justify-content: center;
   padding: 0;
   margin: 0;
-}
-footer ul.footer-menu li {
-  margin: 0 10px;
+  gap: 15px;
 }
 footer .redes {
   display: flex;

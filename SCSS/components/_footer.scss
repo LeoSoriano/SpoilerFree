@@ -33,39 +33,38 @@ font-family: c(pie);
 
 .contenedor-pie {
     display: flex;
-    flex-direction: column; // apila verticalmente
-    align-items: center;    // centra horizontalmente
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     gap: 10px;
-}
 
-.contenedor-pie p {
+    p {
     margin: 0;
+    }
 }
 
 ul.footer-menu {
     @extend %footer-menu;
-    display: flex;           // cambia a flex para alinear elementos horizontalmente
-    justify-content: center; // centra los <li> dentro del ul
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
+    gap: 15px;
 
-    li {
-      margin: 0 10px;        // espacio entre enlaces
-    a {
-        @extend %footer-link;
-    }
+    li a {
+    @extend %footer-link;
     }
 }
 
 .redes {
-    display: flex;           // centra los íconos horizontalmente
+    display: flex;
     justify-content: center;
     gap: 10px;
+
     a {
     @extend %footer-link;
     font-size: 1.2rem;
     }
 }
 }
-
