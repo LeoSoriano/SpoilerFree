@@ -131,8 +131,9 @@ header {
   padding: 5px;
 }
 
-body.index-page {
+.index-page {
   background-color: #0d1117;
+  min-height: 100vh;
 }
 
 /* Títulos INDEX */

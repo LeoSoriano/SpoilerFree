@@ -6,8 +6,9 @@
 
 // ! PAGINA INDEX
 
-body.index-page{
+.index-page{
   background-color: $fondo-oscuro;
+  min-height: 100vh;
 }
 
 /* Títulos INDEX */
