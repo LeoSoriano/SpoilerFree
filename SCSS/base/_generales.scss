@@ -12,20 +12,6 @@
     box-sizing: border-box;
 }
 
-//! BODY
-
-body {
-background-color: $fondo-oscuro;
-color: $gris-muy-claro;
-line-height: 1.6;
-
-&.index-page {
-    h1,
-    h2 {
-    font-family: 'Orbitron', sans-serif;
-    }
-}
-}
 
 // ! ASIDE GENERAL
 @mixin aside-general {
