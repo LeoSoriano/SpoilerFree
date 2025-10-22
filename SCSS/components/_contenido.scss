@@ -86,7 +86,7 @@ width: 100%;
 display: flex;
 flex-wrap: wrap;
 justify-content: flex-start;
-  gap: 20px;            // espacio entre contenedores
+  gap: 25px;            // espacio entre contenedores
 padding: 10px 35px;
 margin-top: 25px;
 
@@ -94,10 +94,10 @@ margin-top: 25px;
     flex: 1 1 calc(25% - 20px); // 4 contenedores por fila
     max-width: 400px;
     min-width: 250px;
-    background-color: #1f2937;
+    background-color: $item-color;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px #00000080;
+    box-shadow: 0 4px 12px $negro-transparente;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;

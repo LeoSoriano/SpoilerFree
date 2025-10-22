@@ -212,7 +212,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 25px;
   padding: 10px 35px;
   margin-top: 25px;
 }
