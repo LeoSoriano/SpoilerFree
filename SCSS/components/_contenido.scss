@@ -84,30 +84,29 @@ box-shadow: 0 4px 20px $negro-transparente;
 .contenedor-general {
 width: 100%;
 display: flex;
-  flex-wrap: wrap;         // permite que los items bajen si no caben
-  justify-content: flex-start;  // alinea a la izquierda
-  gap: 75px;               // espacio entre items
-padding: 10px;
+flex-wrap: wrap;
+justify-content: flex-start;
+  gap: 20px;            // espacio entre contenedores
+padding: 10px 35px;
 margin-top: 25px;
-padding-left: 35px;
 
 .items {
-    flex: 1 1 calc(25% - 25px); // 4 items por fila, descontando gap
-    max-width: 400px;            // no crecer más de 400px
-    min-width: 250px;            // no hacerse demasiado pequeño
+    flex: 1 1 calc(25% - 20px); // 4 contenedores por fila
+    max-width: 400px;
+    min-width: 250px;
     background-color: #1f2937;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px #00000080;
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: justify;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;         // separación vertical
+    text-align: justify;
+    margin-bottom: 20px;
 
     &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px #00000099;
+    box-shadow: 0 10px 25px $carrusel-negro;
     }
 
     img {
@@ -119,12 +118,12 @@ padding-left: 35px;
     }
 
     h2 {
-    color: #00ffff;
+    font-family: c(titulos);
+    color: $cyan-1;
     font-size: 1.9rem;
-    margin: 0;
-    text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 25px #00ffff;
+    margin: 25px 0 0 0;
+    text-shadow: 0 0 5px $cyan-1, 0 0 15px $cyan-1, 0 0 25px $cyan-1;
     text-align: center;
-    margin-top: 25px;
     }
 
     h3 {
@@ -134,15 +133,15 @@ padding-left: 35px;
     }
 
     p {
-    font-family: 'oswald', sans-serif;
+    font-family: C(Nunito);
     font-size: 20px;
     padding: 0 15px 15px 15px;
 
     b {
-        color: red;
+        color: $rojo;
     }
     }
-
+}
      // ===== VIDEO WRAPPER =====
     .video-wrapper {
     position: relative;
@@ -167,7 +166,7 @@ padding-left: 35px;
     }
     }
 }
-}
+
 
 /* Estrellas en Index */
 @keyframes brillar-index {
