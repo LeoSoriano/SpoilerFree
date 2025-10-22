@@ -2,7 +2,13 @@
 @use "../base/funcionalidades" as *;
 @use "../base/generales" as *;
 
+
+
 // ! PAGINA INDEX
+
+body .index-page{
+  background-color: $fondo-oscuro;
+}
 
 /* Títulos INDEX */
 .contenedor-titulo,
@@ -89,6 +95,7 @@ box-shadow: 0 4px 20px $negro-transparente;
   gap: 75px;                 // espacio entre items
   padding: 10px 0 0 35px;
   margin-top: 25px;
+  background-color: transparent;
 
   .items {
     flex: 1 1 calc(25% - 25px); // 4 items por fila, descontando gap

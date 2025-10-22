@@ -141,6 +141,10 @@ header {
   padding: 5px;
 }
 
+body .index-page {
+  background-color: #0d1117;
+}
+
 /* Títulos INDEX */
 .contenedor-titulo,
 .contenedor-subtitulo {
@@ -215,6 +219,7 @@ header {
   gap: 75px;
   padding: 10px 0 0 35px;
   margin-top: 25px;
+  background-color: transparent;
 }
 .contenedor-general .items {
   flex: 1 1 calc(25% - 25px);
