@@ -4,9 +4,8 @@
 
 /*!-----------RESPONSIVE PAGINA INDEX--------*/
 @media (max-width: 400px) {
-
 .logo {
-    width: 180px;
+    width: 120px; // tamaño reducido para móviles
     height: auto;
 }
 
@@ -83,14 +82,14 @@
 }
 
 @media (max-width: 350px) {
-
 .logo {
-    width: 150px;
+    width: 100px;  // logo más compacto para móviles muy pequeños
     height: auto;
 }
 
 .navbar-collapse {
     padding: 6px 0;
+    border-radius: 5px;
 
     .navbar-nav .nav-link {
     font-size: 0.9rem;
@@ -98,23 +97,24 @@
     }
 
     .d-flex {
-    width: 90%;
+    width: 85%;
 
     input,
     button {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         padding: 5px;
     }
     }
 }
 
 .novedad {
-    font-size: 1.9rem;
+    font-size: 2rem;
 }
 
 .emmys {
     font-size: 1.4rem;
 }
+
 
 .contenedor-general {
     gap: 20px;

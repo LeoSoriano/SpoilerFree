@@ -26,14 +26,27 @@ header {
 .logo {
   position: relative;
   display: inline-block;
+  width: 180px;      // tamaño base
+  height: auto;       // mantiene proporción
+  max-width: 100%;    // no excede contenedor
   @extend %efecto-neon;
   animation: neonPulse 2.5s infinite alternate;
 
   &:hover {
     @extend %efecto-neon-hover;
   }
+
+  // Ajustes responsive
+  @media (max-width: 768px) {
+    width: 140px;
+  }
+
+  @media (max-width: 400px) {
+    width: 120px;
+  }
 }
 
+// Animaciones
 @keyframes neonPulse {
   50% { 
     filter: drop-shadow(0 0 10px $cyan-1)
@@ -60,7 +73,7 @@ header {
 
   .navbar-nav {
     .nav-link {
-      font-family: c(parrafo);  // Fuente para texto general
+      font-family: c(parrafo);
       transition: color 0.3s, text-shadow 0.3s;
 
       &:hover {
@@ -89,7 +102,7 @@ header {
 
     input,
     button {
-      font-family: c(parrafo);  // Fuente para inputs y botones
+      font-family: c(parrafo);
       font-size: 0.8rem;
       padding: 5px;
     }
