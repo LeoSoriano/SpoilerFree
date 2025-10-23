@@ -6,10 +6,11 @@
 
 // ! PAGINA INDEX
 
-.index-page{
-  background-color: $fondo-oscuro;
+body.index-page {
+  background-color: $fondo-oscuro;  
   min-height: 100vh;
 }
+
 
 /* Títulos INDEX */
 .contenedor-titulo,
@@ -91,21 +92,21 @@ box-shadow: 0 4px 20px $negro-transparente;
 .contenedor-general {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;           // permite que los items bajen si no caben
+  flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 75px;                 // espacio entre items
+  gap: 75px;
   padding: 10px 0 0 35px;
   margin-top: 25px;
-  background-color: transparent;
+  background-color: transparent;  // Muy importante que sea transparente
 
   .items {
     flex: 1 1 calc(25% - 25px); // 4 items por fila, descontando gap
     max-width: 400px;
     min-width: 250px;
-    background-color: $item-color;
+    background-color: $item-color; // Fondo de color solo para el item
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px $negro-transparente;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.502);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: justify;
     display: flex;
