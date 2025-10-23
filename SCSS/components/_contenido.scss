@@ -6,12 +6,6 @@
 
 // ! PAGINA INDEX
 
-body.index-page {
-  background-color: $fondo-oscuro;  
-  min-height: 100vh;
-}
-
-
 /* Títulos INDEX */
 .contenedor-titulo,
 .contenedor-subtitulo {
@@ -36,7 +30,6 @@ font-size: 2rem;
 font-weight: 500;
 color: $rojo-fuego;
 text-shadow: 0 0 15px $rojo-fuego, 0 0 30px $rojo-fuego;
-
   /* Animación */
 opacity: 0;
 transform: translateY(40px);
@@ -89,24 +82,26 @@ box-shadow: 0 4px 20px $negro-transparente;
 }
 
 // ! BODY INDEX
-.contenedor-general {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 75px;
-  padding: 10px 0 0 35px;
-  margin-top: 25px;
-  background-color: transparent;  // Muy importante que sea transparente
 
-  .items {
-    flex: 1 1 calc(25% - 25px); // 4 items por fila, descontando gap
+.contenedor-general {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 75px;
+    padding: 10px;
+    margin-top: 25px;
+    padding-left: 35px;
+}
+
+.items {
+    flex: 1 1 calc(25% - 25px);
     max-width: 400px;
     min-width: 250px;
-    background-color: $item-color; // Fondo de color solo para el item
+    background-color: $fondo-oscuro;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.502);
+    box-shadow: 0 4px 12px $azul-bootstrap;
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: justify;
     display: flex;
@@ -114,48 +109,49 @@ box-shadow: 0 4px 20px $negro-transparente;
     margin-bottom: 20px;
 
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px $carrusel-negro;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px $carrusel-negro;
     }
 
     img {
-      width: 95%;
-      height: 380px;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      padding: 25px;
+        width: 95%;
+        height: 380px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        padding: 25px;
     }
 
     h2 {
-      color: $cyan-1;
-      font-size: 1.9rem;
-      margin: 25px 0 0 0;
-      text-shadow: 0 0 5px $cyan-1, 0 0 15px $cyan-1, 0 0 25px $cyan-1;
-      text-align: center;
+        color: $cyan-1;
+        font-size: 1.9rem;
+        margin: 0;
+        text-shadow: 0 0 5px $cyan-1, 0 0 15px $cyan-1, 0 0 25px $cyan-1;
+        text-align: center;
+        margin-top: 25px;
     }
 
     h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-      text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        text-align: center;
     }
 
     p {
-      font-family: c(parrafo);
-      font-size: 20px;
-      padding: 0 15px 15px 15px;
+        font-family: c(titulos);
+        font-size: 20px;
+        padding: 0 15px 15px 15px;
 
-      b {
-        color: $rojo;
-      }
+        b {
+            color: $rojo;
+        }
     }
-  }
 }
+
 
 /*================= VIDEO INDEX =================*/
 .video-wrapper {
   position: relative;
-  width: 100%;
+  width: 85%;
   max-width: 330px;
   margin: 20px auto;
   border-radius: 12px;
@@ -199,33 +195,29 @@ margin-left: 10px;
 }
 }
 
-// ================= CARRUSEL =================
+/* ================= CARRUSEL ================= */
 .carousel-container {
-  max-width: 60%;          // reduce el ancho total del carrusel
-  margin: 0 auto;          // centra horizontalmente
-border-radius: 12px;
-overflow: hidden;
-box-shadow: 0 4px 20px $negro-transparente;
+    max-width: 60%;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px $negro-transparente;
 
-.carousel-inner {
-    img {
-      width: 100%;         // ocupa todo el ancho del contenedor
-      max-height: 400px;   // ajusta la altura a tu gusto
-    object-fit: cover;
-    border-radius: 0;
+    .carousel-inner img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 0;
     }
-}
 
-.carousel-caption {
-    h3 {
-    background-color: $carrusel-negro;
-    padding: 6px 10px;
-    border-radius: 10px;
-    font-size: 2rem;
-    color: $dorado-oscuro;
-    font-family: c(titulos);
+    .carousel-caption h3 {
+        background-color: $carrusel-negro;
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 2rem;
+        color: $dorado;
+        font-family: c(titulos);
     }
-}
 }
 
 //! ASIDE
@@ -630,10 +622,20 @@ transition: all 0.3s ease;
 
 /* === GALERÍA DE TRÁILERS === */
 .galeria-trailers-scroll {
-.col-md-4 { display: flex; }
+  display: flex;             // Contenedor como flex
+  flex-wrap: nowrap;         // No queremos que las cards se rompan en otra fila
+  justify-content: space-between; // Opcional: ajusta espacio entre cards
+  gap: 5px;                  // Espacio mínimo entre cards, pon 0 si quieres que estén pegadas
 
-.card {
-    flex: 1 1 auto;
+  .col-md-4 {
+    flex: 1 0 0;             // Cada columna ocupa el mismo ancho
+    padding: 0;              // Elimina padding de bootstrap
+    display: flex;           // Para que la card llene toda la columna
+  }
+
+  .card {
+    flex: 0 0 400px;                 // Que la card llene el ancho de la columna
+    min-height: 350px;       // Altura uniforme
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -642,41 +644,26 @@ transition: all 0.3s ease;
     box-shadow: 0 0 15px $azul-claro, 0 0 25px $cyan-1;
 
     &-img {
-    height: 180px;
-    object-fit: cover;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
+      height: 180px;
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
     }
 
     &-body {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 25px $cyan-1, 0 0 50px $azul-claro;
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px $cyan-1, 0 0 50px $azul-claro;
     }
-}
+  }
 }
 
-.card-img-overlay {
-a.btn-danger {
-    background-color: $rojo-fuego;
-    border: none;
-    font-weight: 600;
-    box-shadow: 0 0 15px $rojo-fuego, 0 0 25px $rojo-rosado;
-    transition: all 0.3s ease;
-
-    &:hover {
-    background-color: $rojo-rosado;
-    box-shadow: 0 0 25px $rojo-fuego, 0 0 50px $rojo-rosado;
-    transform: scale(1.05);
-    }
-}
-}
 
 //! PAGINA CONTACTO
 

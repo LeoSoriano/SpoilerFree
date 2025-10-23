@@ -12,57 +12,72 @@
     box-sizing: border-box;
 }
 
+//! BODY
+
+body {
+    background-color: $fondo-oscuro;
+    color: $texto-blanco;
+    line-height: 1.6;
+
+    &.index-page {
+        h1,
+        h2 {
+            font-family: c(titulo-epecial);
+        }
+    }
+}
 
 // ! ASIDE GENERAL
 @mixin aside-general {
-  position: fixed;
-  right: 15px;
-  top: 365px;
-  width: 160px;
-  background-color: $fondo-principal;
-  color: $texto-blanco;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px $aside-shadow;
-  font-family: c(parrafo);
+    position: fixed;
+    right: 15px;
+    top: 365px;
+    width: 160px;
+    background-color: $fondo-principal;
+    color: $texto-blanco;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    font-family: c(parrafo);
 
-  h3 {
-    text-align: center;
-    margin-bottom: 12px;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin-bottom: 6px;
-      border-radius: 6px;
-      transition: background-color 0.3s, transform 0.2s;
-
-      a {
-        display: block;
-        padding: 6px 10px;
-        text-decoration: none;
-        color: $texto-blanco;
-        border-radius: 6px;
-        transition: color 0.3s;
-      }
-
-      &:hover {
-        background-color: $azul-bootstrap;
-        transform: scale(1.05);
-
-        a {
-          color: $texto-blanco;
-        }
-      }
+    h3 {
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
     }
-  }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 6px;
+            border-radius: 6px;
+            transition: background-color 0.3s, transform 0.2s;
+
+            a {
+                display: block;
+                padding: 6px 10px;
+                text-decoration: none;
+                color: $texto-blanco;
+                border-radius: 6px;
+                transition: color 0.3s;
+            }
+
+            &:hover {
+                background-color: $azul-bootstrap;
+                transform: scale(1.05);
+
+                a {
+                    color: $texto-blanco;
+                }
+            }
+        }
+    }
 }
+
 
 //! PAGINA PELICULAS
 
