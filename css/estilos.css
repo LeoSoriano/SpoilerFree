@@ -599,7 +599,7 @@ iframe:hover {
 }
 .fila-videos .card-video {
   flex: 0 0 auto;
-  width: 530px;
+  width: 500px;
   background: rgba(20, 20, 20, 0.9019607843);
   border-radius: 15px;
   padding: 35px;
