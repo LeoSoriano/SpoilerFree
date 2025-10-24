@@ -3,8 +3,7 @@
 @use "../base/generales" as *;
 
 
-
-// ! PAGINA INDEX
+/* PAGINA INDEX */
 
 /* Títulos INDEX */
 .contenedor-titulo,
@@ -411,7 +410,7 @@ to { text-shadow: 2px 2px 20px $rojo-fuego; }
 // ===================== FILA DE IMAGENES =====================
 .fila-imagenes {
 display: flex;
-gap: 0;
+gap: 1rem;
 flex-wrap: wrap;
 justify-content: left;
 
@@ -421,7 +420,7 @@ border-radius: 15px;
 overflow: hidden;
 padding: 35px;
 transition: transform 0.4s, box-shadow 0.4s;
-gap: 0;
+gap: 1rem;
 
 h3 {
     text-align: center;
@@ -439,14 +438,15 @@ h3 {
 
 .card-gallery {
     display: flex;
-    gap: 0;
+    gap: 10px;
     
 
     img {
-    width: 25%; // 3 imágenes por fila
-    height: 275px;
-    border-radius: 10px;
-    transition: transform 0.4s, filter 0.4s;
+    flex: 0 0 30%; // cada imagen ocupa 30% del contenedor
+  max-width: 30%; // asegura que no se estiren demasiado
+height: 275px;
+border-radius: 10px;
+transition: transform 0.4s, filter 0.4s;
 
 
     &:hover {
@@ -464,11 +464,11 @@ display: flex;
 gap: 1rem;
 flex-wrap: wrap;
 margin-top: 15px;
-padding: 25px;
-max-width: fit-content;
+justify-content: center;
+max-width: 100%;
 
 .card-video {
-    flex: 0 0 auto;
+    flex: 1 1 400px;
     width: 630px;
     background: $negro-card-e6;
     border-radius: 15px;
@@ -496,7 +496,9 @@ max-width: fit-content;
     }
 
     iframe {
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
     border-radius: 10px;
     border: none;
     transition: transform 0.4s, box-shadow 0.4s;
@@ -538,7 +540,7 @@ iframe {
 }
 
 
-//! PAGINA TRAILERS
+/* PAGINA TRAILERS */
 
 body.trailer-page{
     background-color: $fondo-oscuro;

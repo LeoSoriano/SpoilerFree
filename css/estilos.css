@@ -130,6 +130,7 @@ header {
   padding: 5px;
 }
 
+/* PAGINA INDEX */
 /* Títulos INDEX */
 .contenedor-titulo,
 .contenedor-subtitulo {
@@ -548,7 +549,7 @@ iframe:hover {
 }
 .fila-imagenes {
   display: flex;
-  gap: 0;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: left;
 }
@@ -558,7 +559,7 @@ iframe:hover {
   overflow: hidden;
   padding: 35px;
   transition: transform 0.4s, box-shadow 0.4s;
-  gap: 0;
+  gap: 1rem;
 }
 .fila-imagenes .card-imagenes h3 {
   text-align: center;
@@ -574,10 +575,11 @@ iframe:hover {
 }
 .fila-imagenes .card-imagenes .card-gallery {
   display: flex;
-  gap: 0;
+  gap: 10px;
 }
 .fila-imagenes .card-imagenes .card-gallery img {
-  width: 25%;
+  flex: 0 0 30%;
+  max-width: 30%;
   height: 275px;
   border-radius: 10px;
   transition: transform 0.4s, filter 0.4s;
@@ -592,11 +594,11 @@ iframe:hover {
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 15px;
-  padding: 25px;
-  max-width: fit-content;
+  justify-content: center;
+  max-width: 100%;
 }
 .fila-videos .card-video {
-  flex: 0 0 auto;
+  flex: 1 1 400px;
   width: 630px;
   background: rgba(20, 20, 20, 0.9019607843);
   border-radius: 15px;
@@ -621,7 +623,9 @@ iframe:hover {
   color: #ccc;
 }
 .fila-videos .card-video iframe {
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
   border-radius: 10px;
   border: none;
   transition: transform 0.4s, box-shadow 0.4s;
@@ -655,6 +659,7 @@ iframe:hover {
   box-shadow: 0 0 15px rgba(0, 191, 255, 0.9019607843);
 }
 
+/* PAGINA TRAILERS */
 body.trailer-page {
   background-color: #0d1117;
 }
