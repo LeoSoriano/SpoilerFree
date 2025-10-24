@@ -550,10 +550,12 @@ iframe:hover {
 .fila-imagenes {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: left;
 }
 .fila-imagenes .card-imagenes {
+  flex: 0 0 30%;
+  box-sizing: border-box;
   background: rgba(20, 20, 20, 0.9490196078);
   border-radius: 15px;
   overflow: hidden;

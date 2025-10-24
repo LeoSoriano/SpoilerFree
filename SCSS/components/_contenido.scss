@@ -411,10 +411,12 @@ to { text-shadow: 2px 2px 20px $rojo-fuego; }
 .fila-imagenes {
 display: flex;
 gap: 1rem;
-flex-wrap: wrap;
+flex-wrap: nowrap;
 justify-content: left;
 
 .card-imagenes {
+flex: 0 0 30%;
+box-sizing: border-box;
 background: $negro-card-f2;
 border-radius: 15px;
 overflow: hidden;
