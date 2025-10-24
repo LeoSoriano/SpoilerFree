@@ -3,7 +3,9 @@
 @use "../base/generales" as *;
 
 
-/* PAGINA INDEX */
+//!---------- PAGINA INDEX------------------- */
+
+
 
 /* Títulos INDEX */
 .contenedor-titulo,
@@ -33,7 +35,7 @@ text-shadow: 0 0 15px $rojo-brillante, 0 0 30px $rojo-brillante;
 opacity: 0;
 transform: translateY(40px);
 animation: fadeUp 1.5s ease-out forwards;
-  animation-delay: 0.7s; // Aparece después del título
+  animation-delay: 0.7s; /* Aparece después del título */
 }
 
 /* Animaciones */
@@ -80,7 +82,7 @@ box-shadow: 0 4px 20px $negro-transparente;
 }
 }
 
-// ! BODY INDEX
+//! -------------BODY INDEX--------------------*/
 
 .contenedor-general {
     width: 100%;
@@ -147,7 +149,7 @@ box-shadow: 0 4px 20px $negro-transparente;
 }
 
 
-/*================= VIDEO INDEX =================*/
+/* VIDEO INDEX */
 .video-wrapper {
 position: relative;
 width: 85%;
@@ -194,7 +196,7 @@ margin-left: 10px;
 }
 }
 
-/* ================= CARRUSEL ================= */
+/*  CARRUSEL  */
 .carousel-container {
     max-width: 60%;
     margin: 0 auto;
@@ -219,14 +221,13 @@ margin-left: 10px;
     }
 }
 
-//! ASIDE
+//!--------------- ASIDE--------------------------------*/
 
 aside{
     @include aside-general;
 }
 
-// ! PAGINA SERIES
-
+//!-------------------- PAGINA SERIES-------------------*/
 
 body.series-page {
 background-color: $fondo-oscuro; 
@@ -244,13 +245,37 @@ font-family: 'Nunito', sans-serif;
 .seriesNew {
     font-size: 3rem;
     color: $azul-claro;
-    text-shadow: 0 0 10px $azul-claro, 0 0 20px $cyan-1, 0 0 30px $cyan-1; 
+    text-shadow: 0 0 10px $azul-claro, 0 0 20px $cyan-1, 0 0 30px $cyan-1;
+     /* Animación */
+opacity: 0;
+transform: translateX(-80px);
+animation: slideIn 1.5s ease-out forwards;
 }
 
 .estreno {
     font-size: 2rem;
     color: $rojo-fuego; 
     text-shadow: 0 0 15px $rojo-fuego, 0 0 30px $rojo-fuego;
+      /* Animación */
+opacity: 0;
+transform: translateY(40px);
+animation: fadeUp 1.5s ease-out forwards;
+  animation-delay: 0.7s; /* Aparece después del título */
+}
+
+/* Animaciones */
+@keyframes slideIn {
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+@keyframes fadeUp {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 }
 
 /*Carrusel pag Series */
@@ -387,7 +412,7 @@ font-family: 'Nunito', sans-serif;
     }
 }
 
-//! PAGINA PELICULAS
+//!------------------- PAGINA PELICULAS--------------------*/
 .contenedor-titulo {
 text-align: center;
 margin: 3rem 0;
@@ -399,6 +424,10 @@ margin: 3rem 0;
     color: $rojo-fuego;
     text-shadow: 0 0 15px $rojo-brillante, 0 0 30px $rojo-brillante;
     animation: glow 2s infinite alternate;
+      /* Animación */
+opacity: 0;
+transform: translateX(-80px);
+animation: slideIn 1.5s ease-out forwards;
 }
 }
 
@@ -407,19 +436,26 @@ from { text-shadow: 2px 2px 12px $rojo-fuego-80; }
 to { text-shadow: 2px 2px 20px $rojo-fuego; }
 }
 
-// ===================== FILA DE IMAGENES =====================
+@keyframes slideIn {
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+/* FILA DE IMAGENES */
 .fila-imagenes {
 display: flex;
-  gap: 4rem;             // espacio entre tarjetas
-  flex-wrap: nowrap;      // evita que se rompan a otra fila
-  justify-content: flex-start; // opcional, centra la fila
+gap: 4rem;             /* espacio entre tarjetas */
+flex-wrap: nowrap;      /* evita que se rompan a otra fila*/
+justify-content: flex-start; 
 margin-left: 35px;
 
 .card-imagenes {
- flex: 0 0 25%;          // cada tarjeta ocupa 25% del contenedor
+ flex: 0 0 25%;          /* cada tarjeta ocupa 25% del contenedor */
 max-width: 25%;
-  box-sizing: border-box; // incluye padding en el ancho
-  padding: 15px;          // reduce el padding para que no rompa la fila
+box-sizing: border-box; 
+padding: 15px;          
 border-radius: 15px;
 background: $negro-card-f2;
 transition: transform 0.4s, box-shadow 0.4s;
@@ -444,8 +480,8 @@ h3 {
     
 
     img {
-flex: 1; // cada imagen ocupa 30% del contenedor
-max-width: 30%; // asegura que no se estiren demasiado
+flex: 1; /* cada imagen ocupa 30% del contenedor */
+max-width: 30%; /* asegura que no se estiren demasiado */
 height: 275px;
 border-radius: 10px;
 transition: transform 0.4s, filter 0.4s;
@@ -460,7 +496,7 @@ transition: transform 0.4s, filter 0.4s;
 }
 }
 
-// ===================== FILA DE VIDEOS =====================
+/* FILA DE VIDEOS */
 .fila-videos {
 display: flex;
 gap: 3rem;
@@ -514,7 +550,7 @@ margin-left: 35px;
 }
 }
 
-// ===================== CARD VIDEO GRANDE =====================
+/* CARD VIDEO GRANDE */
 .card-video-grande {
 margin-top: 25px;
 border-radius: 15px;
@@ -542,8 +578,7 @@ iframe {
 }
 }
 
-
-/* PAGINA TRAILERS */
+//!-------PAGINA TRAILERS-------------*/
 
 body.trailer-page{
     background-color: $fondo-oscuro;
@@ -574,7 +609,7 @@ overflow: hidden;
 100% { opacity: 0.5; transform: scale(1.3); }
 }
 
-/* === TÍTULOS === */
+/*  TÍTULOS  */
 .TrailerNew {
 font-family: c(titulo-especial);
 color: $azul-claro;
@@ -585,11 +620,20 @@ letter-spacing: 2px;
 font-weight: 700;
 margin-bottom: 20px;
 animation: glowPulse 2s infinite ease-in-out;
+opacity: 0;
+transform: translateX(-80px);
+animation: slideIn 1.5s ease-out forwards;
 }
 
 @keyframes glowPulse {
 0%, 100% { text-shadow: 0 0 5px $azul-claro, 0 0 15px $azul-claro, 0 0 25px $azul-claro; }
 50% { text-shadow: 0 0 10px $azul-claro, 0 0 20px $azul-claro, 0 0 35px $azul-claro; }
+}
+@keyframes slideIn {
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
 }
 
 .MakerTitle {
@@ -609,7 +653,7 @@ animation: glowRedPulse 2s infinite ease-in-out;
 50% { text-shadow: 0 0 10px $rojo, 0 0 20px $rojo-brillante; }
 }
 
-/* === CARRUSEL === */
+/*  CARRUSEL  */
 .carousel-inner {
 img {
     width: 100%;
@@ -646,7 +690,7 @@ iframe {
 }
 }
 
-/* === BOTONES DE FILTRO === */
+/*  BOTONES DE FILTRO = */
 .btn-outline-light {
 border: 1px solid $cyan-1;
 color: $texto-blanco;
@@ -659,7 +703,7 @@ transition: all 0.3s ease;
 }
 }
 
-/* === GALERÍA DE TRÁILERS === */
+/*  GALERÍA DE TRÁILERS  */
 .galeria-trailers-scroll {
 display: flex;
 flex-wrap: nowrap;
@@ -733,7 +777,12 @@ overflow: hidden;
     text-align: center;
     text-shadow: 2px 2px 15px $amarillo-claro;
     animation: glow-text 2s infinite alternate;
+    opacity: 0;
+transform: translateX(-80px);
+animation: slideIn 1.5s ease-out forwards;
 }
+
+
 
 .descripcion-contacto {
     font-family: c(parrafo);
@@ -751,6 +800,12 @@ overflow: hidden;
 @keyframes glow-text {
     from { text-shadow: 2px 2px 10px $amarillo-neon; }
     to { text-shadow: 2px 2px 25px $amarillo-neon; }
+}
+@keyframes slideIn {
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
 }
 
   /* FORMULARIO */
@@ -790,15 +845,17 @@ overflow: hidden;
     transition: all 0.3s;
     width: 100%;
     margin-bottom: 1rem;
+    background-color: $gris-claro;
+    color: $gris-carbon;
 
     &:focus {
         outline: none;
         box-shadow: 0 0 10px $azul-iframe;
-        background: $gris-carbon;
+        background: $gris-claro;
     }
 
     &::placeholder {
-        color: $gris-claro;
+        color: $gris-carbon;
     }
     }
 

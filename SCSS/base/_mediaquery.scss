@@ -1,238 +1,359 @@
 //!---------MEDIA QUERYS-----------*/
 
-//!---------MEDIA QUERYS PAGINA INDEX----------*/
+@use "./funcionalidades" as *;
 
-/*!-----------RESPONSIVE PAGINA INDEX--------*/
-@media (max-width: 400px) {
+//!---MEDIA QUERYS HEADER-------*/
+
+@media (max-width: 992px) {
 .logo {
-    width: 120px; // tamaño reducido para móviles
-    height: auto;
+    width: 140px;
 }
 
 .navbar-collapse {
-    padding: 8px 0;
-    border-radius: 6px;
-
-    .navbar-nav .nav-link {
-    font-size: 1rem;
-    padding: 5px 8px;
+    .navbar-nav {
+    .nav-link {
+        font-size: 0.85rem;
+        padding: 3px 5px;
+    }
     }
 
     .d-flex {
-    width: 90%;
+    width: 30%;
 
     input,
     button {
-        font-size: 0.9rem;
-        padding: 6px;
+        font-size: 0.75rem;
+        padding: 4px;
     }
     }
 }
-
-.novedad {
-    font-size: 2.2rem;
 }
 
-.emmys {
-    font-size: 1.6rem;
+/* === Pantallas pequeñas (≤768px) === */
+@media (max-width: 768px) {
+.logo {
+    width: 120px;
 }
 
-.contenedor-general {
+.navbar {
+    .navbar-nav {
+    justify-content: center;
+    text-align: center;
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 3px 5px;
+    }
+    }
+
+    .navbar-collapse {
+    .d-flex {
+        width: 40%;
+
+        input,
+        button {
+        font-size: 0.7rem;
+        padding: 3px;
+        }
+}
+    }
+}
+}
+
+
+@media (max-width: 480px) {
+.logo {
+    width: 100px;
+}
+
+.navbar {
+    flex-direction: column;
+    align-items: center;
+
+    .navbar-nav {
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 2px 4px;
+}
+    }
+
+    .navbar-collapse {
     width: 100%;
-    display: flex;
-    flex-direction: column; // apila los elementos verticalmente
-    align-items: center;    // centra los bloques
-    padding-left: 0;
-    gap: 25px;              // menos espacio entre secciones
 
-    h2 {
-    font-size: 1.6rem;
-    }
+    .d-flex {
+        width: 80%;
+        margin-top: 5px;
 
-    h3 {
-    font-size: 1.2rem;
-    }
-
-    p {
-    font-size: 0.9rem;
-    }
-
-    .video-wrapper {
-    max-width: 280px;
-    margin: 15px auto;
-
-    iframe {
-        height: 250px;
+        input,
+        button {
+        font-size: 0.65rem;
+        padding: 2px;
+        }
     }
     }
+}
+}
+
+
+//!---------MEDIA QUERYS PAGINA INDEX----------*/
+
+@media (max-width: 992px) {
+.contenedor-general {
+    gap: 30px;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.items {
+    flex: 1 1 45%; /* dos columnas */
+    max-width: 45%;
+}
+
+.video-wrapper {
+    width: 70%;
+    max-width: 500px;
 }
 
 .carousel-container {
     max-width: 80%;
-
-    .carousel-inner img {
-    max-height: 300px;
-    }
-
-    .carousel-caption h3 {
-    font-size: 2rem;
-    padding: 6px 10px;
-    }
 }
 }
 
-@media (max-width: 350px) {
-.logo {
-    width: 100px;  // logo más compacto para móviles muy pequeños
-    height: auto;
+@media (max-width: 768px) {
+.contenedor-general {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.navbar-collapse {
-    padding: 6px 0;
-    border-radius: 5px;
-
-    .navbar-nav .nav-link {
-    font-size: 0.9rem;
-    padding: 4px 6px;
-    }
-
-    .d-flex {
-    width: 85%;
-
-    input,
-    button {
-        font-size: 0.8rem;
-        padding: 5px;
-    }
-    }
+.items {
+    flex: 1 1 95%;
+    max-width: 95%;
 }
 
+.video-wrapper {
+    width: 95%;
+    max-width: 100%;
+}
+
+.carousel-container {
+    max-width: 95%;
+}
+}
+
+@media (max-width: 480px) {
 .novedad {
     font-size: 2rem;
 }
 
 .emmys {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
+.items {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
 
-.contenedor-general {
-    gap: 20px;
-
-    h2 {
-    font-size: 1.4rem;
-    }
-
-    h3 {
-    font-size: 1rem;
-    }
-
-    p {
-    font-size: 0.85rem;
-    }
-
-    .video-wrapper {
-    max-width: 250px;
-    margin: 10px auto;
-
-    iframe {
-        height: 220px;
-    }
-    }
+.video-wrapper {
+    width: 100%;
 }
 
 .carousel-container {
-    max-width: 95%;
-
-    .carousel-inner img {
-    max-height: 250px;
-    width: 90%;
-    }
-
-    .carousel-caption h3 {
-    font-size: 1.8rem;
-    padding: 5px 8px;
-    }
-}
+    max-width: 100%;
 }
 
-
+img {
+    height: auto; // que se ajuste proporcionalmente
+}
+}
 
 //!----------ASIDE GENERAL---------*/
 
-aside {
-@media (max-width: 400px) {
-    position: static; // 🔹 dejar que fluya en el layout
-    width: 100%;      // 🔹 ocupar todo el ancho
-    padding: 12px;
-    margin-top: 20px; // 🔹 separación respecto al contenido superior
+@media (max-width: 992px) {
+.aside-general {
+    position: absolute;   /* deja de ser fijo */
+    top: auto;
+    bottom: 0;            /* se coloca al final del contenido */
+    right: 0;
+    width: 180px;
+    margin: 0 auto;
+}
+}
+
+
+@media (max-width: 768px) {
+.aside-general {
+    position: relative;   /* ya no flota */
+    top: auto;
+    right: auto;
+    width: 95%;           /* ocupa casi todo el ancho */
+    margin: 20px auto;    /* centrado horizontal */
+    padding: 15px;
+    border-radius: 10px;
 
     h3 {
     font-size: 1rem;
-    margin-bottom: 10px;
-      text-align: center; // 🔹 opcional: centra el título
+    text-align: center;
     }
 
-    ul li a {
-    padding: 5px 8px;
-      display: block;     // 🔹 cada enlace en su propia línea
-      text-align: center; // 🔹 centra el texto
+    ul li {
+    a {
+        padding: 8px 10px;
+    }
     }
 }
+}
 
-@media (max-width: 350px) {
-    position: static;
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
+@media (max-width: 480px) {
+.aside-general {
+    width: 100%;          /* ocupa todo el ancho del contenedor*/
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
 
     h3 {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    text-align: center;
+    font-size: 0.95rem;
     }
 
     ul li a {
-    padding: 4px 6px;
-    display: block;
-    text-align: center;
+    padding: 6px 8px;
+    font-size: 0.9rem;
     }
 }
 }
 
+
+
 //!---------FOOTER GENERAL--------------*/
+
 footer {
-@media (max-width: 400px) {
-    padding: 15px 0;
+    padding: 25px 10px;
+
+    .contenedor-pie {
+    gap: 8px;
+
+    p {
+        font-size: 0.95rem;
+    }
+    }
 
     ul.footer-menu {
-    gap: 15px;
+    gap: 12px;
+
+    li a {
+        font-size: 0.95rem;
+    }
+    }
+
+    .redes a {
+    font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+footer {
+    padding: 20px 10px;
+
+    .contenedor-pie {
+    gap: 6px;
+    text-align: center;
+
+    p {
+        font-size: 0.9rem;
+    }
+    }
+
+    ul.footer-menu {
+    flex-direction: column;
+    gap: 8px;
 
     li a {
         font-size: 0.9rem;
     }
     }
 
-    .redes a {
-    font-size: 1rem;
-    margin: 0 4px;
+    .redes {
+    flex-direction: row;
+    gap: 8px;
+
+    a {
+        font-size: 1rem;
+    }
     }
 }
+}
 
-@media (max-width: 350px) {
-    padding: 12px 0;
+@media (max-width: 480px) {
+footer {
+    padding: 15px 5px;
+
+    .contenedor-pie {
+    gap: 4px;
+
+    p {
+        font-size: 0.85rem;
+    }
+    }
 
     ul.footer-menu {
-    gap: 10px;
+    flex-direction: column;
+    gap: 5px;
 
     li a {
         font-size: 0.85rem;
     }
     }
 
-    .redes a {
-    font-size: 0.95rem;
-    margin: 0 3px;
+    .redes {
+    display: flex;
+      flex-wrap: wrap; /* 2 filas si es necesario */
+    justify-content: center;
+    gap: 6px;
+
+    a {
+        font-size: 0.95rem;
+        flex: 1 0 40%; /* aprox. dos iconos por fila */
+        text-align: center;
+    }
+    }
+}
+}
+
+
+@media (max-width: 360px) {
+footer {
+    padding: 10px 5px;
+
+    .contenedor-pie {
+    gap: 3px;
+
+    p {
+        font-size: 0.8rem;
+    }
+    }
+
+    ul.footer-menu {
+    gap: 4px;
+
+    li a {
+        font-size: 0.8rem;
+    }
+    }
+
+    .redes {
+    flex-wrap: wrap;
+    gap: 4px;
+
+    a {
+        font-size: 0.85rem;
+        flex: 1 0 45%; /* dos iconos por fila */
+        text-align: center;
+    }
     }
 }
 }
@@ -240,325 +361,506 @@ footer {
 
 //!---------MEDIA QUERYS PAGINA SERIES---------*/
 
-@media (max-width: 400px) {
-body.series-page {
-    .contenedor-tituloSeries,
-    .contenedor-subtitulo2 {
-    margin: 30px 15px 15px 15px;
-    }
+@media (max-width: 992px) {
+.contenedor-tituloSeries,
+.contenedor-subtitulo2 {
+    margin: 40px 15px 15px 15px;
+}
 
-    .seriesNew {
-    font-size: 2.2rem;
-    }
+.seriesNew {
+    font-size: 2.5rem;
+}
 
-    .estreno {
-    font-size: 1.6rem;
-    }
+.estreno {
+    font-size: 1.8rem;
+}
 
-    .carousel {
+.carousel {
     width: 90%;
 
     .carousel-item img {
-        border-radius: 8px;
-    }
-    }
-
-    .contenido-principal {
-    padding: 30px 15px;
-    }
-
-    .items-series {
-    width: 90%;
-    height: auto;
-    padding: 15px;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 0.95rem;
-    }
-
-    iframe {
-        height: 400px;
-    }
-    }
-}
-}
-
-@media (max-width: 350px) {
-body.series-page {
-    .contenedor-tituloSeries,
-    .contenedor-subtitulo2 {
-    margin: 25px 10px 10px 10px;
-    }
-
-    .seriesNew {
-    font-size: 2rem;
-    }
-
-    .estreno {
-    font-size: 1.4rem;
-    }
-
-    .carousel {
-    width: 95%;
-    }
-
-    .contenido-principal {
-    padding: 20px 10px;
-    }
-
-    .items-series {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 0.95rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    iframe {
-        height: 350px;
-    }
-    }
-}
-}
-
-//!----------------MEDIA QUERYS PAGINA PELICULAS----------------*/
-
-@media (max-width: 400px) {
-body.peliculas-page {
-    .MovieNew {
-      font-size: 2.5rem; /* reduce el tamaño del título */
-    letter-spacing: 2px;
-    }
-
-    .grid-peliculas {
-      grid-template-columns: 1fr; /* una sola columna */
-    padding: 20px;
-    gap: 20px;
-
-    .card-imagenes,
-    .card-video,
-    .card-video-grande {
-        padding: 10px;
-
-        .card-gallery img {
-        width: 60px;
-        height: 90px;
-        }
-
-        iframe {
-        height: 180px;
-        }
-    }
-    }
-}
-}
-
-
-@media (max-width: 350px) {
-body.peliculas-page {
-    .MovieNew {
-      font-size: 2rem; /* aún más pequeño */
-    letter-spacing: 1px;
-    }
-
-    .grid-peliculas {
-    padding: 15px;
-    gap: 15px;
-
-    .card-imagenes,
-    .card-video,
-    .card-video-grande {
-        padding: 8px;
-
-        .card-gallery img {
-        width: 50px;
-        height: 75px;
-        }
-
-        iframe {
-        height: 150px;
-        }
-    }
-    }
-}
-}
-
-
-//!----------MEDIA QUERYS PAGINA TRAILERS-------------*/
-
-.TrailerNew {
-@media (max-width: 400px) {
-    font-size: 2rem;
-}
-@media (max-width: 350px) {
-    font-size: 1.6rem;
-}
-}
-
-.MakerTitle {
-@media (max-width: 400px) {
-    font-size: 1.4rem;
-}
-@media (max-width: 350px) {
-    font-size: 1.2rem;
-}
-}
-
-.carousel-inner {
-img {
-    @media (max-width: 400px) {
     height: 350px;
     }
-    @media (max-width: 350px) {
+}
+
+.contenido-principal {
+    padding: 40px 15px;
+}
+
+.items-series {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    height: auto;
+
+    img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    }
+
+    h2 {
+    font-size: 1.7rem;
+    }
+
+    h3 {
+    font-size: 1.1rem;
+    }
+
+    p {
+    font-size: 0.95rem;
+    }
+
+    iframe {
+    width: 100%;
     height: 300px;
     }
 }
 }
 
-.ratio {
-iframe {
-    @media (max-width: 400px) {
+
+@media (max-width: 768px) {
+.contenedor-tituloSeries,
+.contenedor-subtitulo2 {
+    margin: 30px 10px 10px 10px;
+}
+
+.seriesNew {
+    font-size: 2rem;
+}
+
+.estreno {
+    font-size: 1.5rem;
+}
+
+.carousel {
+    width: 95%;
+
+    .carousel-item img {
     height: 250px;
     }
-    @media (max-width: 350px) {
-    height: 200px;
+}
+
+.contenido-principal {
+    padding: 30px 10px;
+}
+
+.items-series {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+
+    img {
+    width: 90%;
+    height: 220px;
     }
-}
-}
 
-.galeria-trailers-scroll {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
+    h2 {
+    font-size: 1.5rem;
+    }
 
-@media (max-width: 400px) {
-    grid-template-columns: 1fr; /* 1 columna */
-}
-@media (max-width: 350px) {
-    grid-template-columns: 1fr; /* sigue 1 columna */
-}
+    h3 {
+    font-size: 1rem;
+    }
 
-.card {
-    @media (max-width: 400px) {
+    p {
     font-size: 0.9rem;
     }
-    @media (max-width: 350px) {
-    font-size: 0.8rem;
-    }
 
-    .card-img {
-    @media (max-width: 400px) {
-        height: 140px;
-    }
-    @media (max-width: 350px) {
-        height: 120px;
-    }
+    iframe {
+    width: 95%;
+    height: 220px;
     }
 }
 }
 
-.btn-outline-light {
-@media (max-width: 400px) {
-    font-size: 0.8rem;
-    padding: 6px 10px;
-}
-@media (max-width: 350px) {
-    font-size: 0.75rem;
-    padding: 5px 8px;
-}
+/* === Pantallas muy pequeñas (<480px) === */
+@media (max-width: 480px) {
+.contenedor-tituloSeries,
+.contenedor-subtitulo2 {
+    margin: 20px 5px 5px 5px;
 }
 
-.card-img-overlay {
-a.btn-danger {
-    @media (max-width: 400px) {
-    font-size: 0.8rem;
-    padding: 5px 10px;
+.seriesNew {
+    font-size: 1.6rem;
+}
+
+.estreno {
+    font-size: 1.2rem;
+}
+
+.carousel {
+    width: 100%;
+
+    .carousel-item img {
+    height: 180px;
     }
-    @media (max-width: 350px) {
-    font-size: 0.75rem;
-    padding: 4px 8px;
+}
+
+.contenido-principal {
+    padding: 20px 5px;
+}
+
+.items-series {
+    img {
+    width: 100%;
+    height: 150px;
+    }
+
+    h2 {
+    font-size: 1.3rem;
+    }
+
+    h3 {
+    font-size: 0.9rem;
+    }
+
+    p {
+    font-size: 0.85rem;
+    }
+
+    iframe {
+    width: 100%;
+    height: 150px;
     }
 }
 }
 
-//!-----------MEDIA QUERYS PAGINA CONTACTO----------*/
 
-.seccion-contacto {
-@media (max-width: 400px) {
-    min-height: auto; // ajusta si es necesario
+//!----------------MEDIA QUERYS PAGINA PELICULAS----------------*/
+
+@media (max-width: 992px) {
+.contenedor-titulo .MovieNew {
+    font-size: 3rem;
 }
-@media (max-width: 350px) {
+
+.fila-imagenes {
+    gap: 2rem;
+
+    .card-imagenes {
+    flex: 1 1 calc(50% - 2rem);
+    max-width: 50%;
+
+    .card-gallery img {
+        max-width: 45%;
+        height: 220px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+    }
+}
+
+.fila-videos {
+    gap: 2rem;
+
+    .card-video {
+    width: 100%;
+    padding: 25px;
+
+    h3 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 220px;
+    }
+    }
+}
+
+.card-video-grande {
+    width: 100%;
+    padding: 25px;
+
+    h3 {
+    font-size: 35px;
+    }
+
+    iframe {
+    width: 100%;
+    height: 250px;
+    }
+}
+}
+
+@media (max-width: 768px) {
+.contenedor-titulo .MovieNew {
+    font-size: 2.2rem;
+}
+
+.fila-imagenes,
+.fila-videos,
+.card-video-grande {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: 0;
+}
+
+.fila-imagenes .card-imagenes,
+.fila-videos .card-video,
+.card-video-grande {
+    flex: 1 1 100%;
+    max-width: 90%;
     min-height: auto;
 }
 
-.titulo-contacto {
-    @media (max-width: 400px) {
-    font-size: 2rem;
+.fila-imagenes .card-imagenes .card-gallery img {
+    max-width: 100%;
+    height: 180px;
+}
+
+.fila-videos .card-video iframe,
+.card-video-grande iframe {
+    width: 100%;
+    height: 200px;
+}
+
+.fila-imagenes .card-imagenes h3,
+.fila-videos .card-video h3,
+.card-video-grande h3 {
+    font-size: 22px;
+}
+
+.fila-videos .card-video p {
+    font-size: 16px;
+}
+}
+
+/* === Pantallas muy pequeñas (<480px) === */
+@media (max-width: 480px) {
+.contenedor-titulo .MovieNew {
+    font-size: 1.8rem;
+}
+
+.fila-imagenes .card-imagenes,
+.fila-videos .card-video,
+.card-video-grande {
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.fila-imagenes .card-imagenes .card-gallery img {
+    height: 150px;
+}
+
+.fila-videos .card-video iframe,
+.card-video-grande iframe {
+    height: 150px;
+}
+
+.fila-imagenes .card-imagenes h3,
+.fila-videos .card-video h3,
+.card-video-grande h3 {
+    font-size: 18px;
+}
+
+.fila-videos .card-video p {
+    font-size: 14px;
+}
+}
+
+//!----------MEDIA QUERYS PAGINA TRAILERS-------------*/
+
+@media (max-width: 992px) {
+.TrailerNew {
+    font-size: 2.2rem;
+}
+
+.MakerTitle {
+    font-size: 1.4rem;
+}
+
+.carousel-inner img {
+    height: 400px;
+}
+
+.galeria-trailers-scroll {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    .card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 400px;
+    }
+}
+}
+
+@media (max-width: 768px) {
+.TrailerNew {
+    font-size: 1.8rem;
     margin-bottom: 15px;
-    }
-    @media (max-width: 350px) {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    }
 }
 
-.formulario-contacto {
-    @media (max-width: 400px) {
+.MakerTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.carousel-inner img {
+    height: 300px;
+}
+
+.galeria-trailers-scroll {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .col-md-4 {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    .card {
+    flex: 1 1 100%;
     max-width: 90%;
-    height: 600px;
-    }
-    @media (max-width: 350px) {
-    max-width: 95%;
-    height: 550px;
+    min-height: 300px;
     }
 }
 
-.form-control {
-    @media (max-width: 400px) {
-    font-size: 0.9rem;
-    padding: 8px;
-    }
-    @media (max-width: 350px) {
-    font-size: 0.85rem;
-    padding: 7px;
-    }
+.ratio iframe {
+    height: 220px;
+}
 }
 
-.btn-enviar {
-    @media (max-width: 400px) {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+
+@media (max-width: 480px) {
+.TrailerNew {
+    font-size: 1.5rem;
+}
+
+.MakerTitle {
+    font-size: 1rem;
+}
+
+.carousel-inner img {
+    height: 220px;
+}
+
+.card {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.ratio iframe {
+    height: 200px;
+}
+}
+
+
+
+//!-----------MEDIA QUERYS PAGINA CONTACTO----------*/
+
+@media (max-width: 992px) {
+.seccion-contacto {
+    .titulo-contacto {
+    font-size: 3rem;
     }
-    @media (max-width: 350px) {
-    font-size: 0.85rem;
-    padding: 8px 16px;
+
+    .descripcion-contacto {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    }
+
+    .formulario-contacto {
+    max-width: 500px;
+    padding: 1.5rem;
+    }
+}
+}
+
+@media (max-width: 768px) {
+.seccion-contacto {
+    .titulo-contacto {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    }
+
+    .descripcion-contacto {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    }
+
+    .formulario-contacto {
+    max-width: 90%;
+    padding: 1.5rem;
+    border-radius: 15px;
+    }
+
+    .btn-enviar {
+    width: 100%;
+    padding: 0.75rem;
+    }
+}
+}
+
+@media (max-width: 550px) {
+.seccion-contacto {
+    padding: 2rem 0.5rem;
+
+    .titulo-contacto {
+    font-size: 2rem;
+    text-shadow: 1px 1px 10px $amarillo-claro;
+    }
+
+    .descripcion-contacto {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+    }
+
+    .formulario-contacto {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .btn-enviar {
+        font-size: 0.95rem;
+        padding: 0.6rem 1rem;
+    }
+    }
+}
+}
+
+@media (max-width: 400px) {
+.seccion-contacto {
+    .titulo-contacto {
+    font-size: 1.8rem;
+    }
+
+    .descripcion-contacto {
+    font-size: 0.9rem;
+    }
+
+    .formulario-contacto {
+    padding: 0.8rem;
+    .form-control {
+        font-size: 0.85rem;
+    }
+    .btn-enviar {
+        font-size: 0.85rem;
+    }
     }
 }
 }
