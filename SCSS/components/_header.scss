@@ -1,5 +1,6 @@
 // Placeholder para efecto neon
 @use "../base/funcionalidades" as *;
+
 %efecto-neon {
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: drop-shadow(0 0 5px $cyan-1)
@@ -26,9 +27,9 @@ header {
 .logo {
   position: relative;
   display: inline-block;
-  width: 180px;      // tamaño base
-  height: auto;       // mantiene proporción
-  max-width: 100%;    // no excede contenedor
+  width: 180px;      
+  height: auto;       
+  max-width: 100%;   
   @extend %efecto-neon;
   animation: neonPulse 2.5s infinite alternate;
 
@@ -36,22 +37,14 @@ header {
     @extend %efecto-neon-hover;
   }
 
-  // Ajustes responsive
-  @media (max-width: 768px) {
-    width: 140px;
-  }
-
-  @media (max-width: 400px) {
-    width: 120px;
-  }
 }
 
 // Animaciones
-@keyframes neonPulse {
-  50% { 
-    filter: drop-shadow(0 0 10px $cyan-1)
+@keyframes neonPulse {                  
+  50% {  /* Significa que se aplicara a la mitad de la animacion*/
+    filter: drop-shadow(0 0 10px $cyan-1)      /* Como son dos drop shadow, lo que hace es que se uperponen y hacen que la animacion sea mas intensa */
             drop-shadow(0 0 25px $azul-claro);
-    transform: scale(1.05) rotate(1deg); 
+    transform: scale(1.05) rotate(1deg);  /* Aumenta el tamaño del elemento un 5% y rota el elemento 1 grado */
   }
   100% { 
     filter: drop-shadow(0 0 15px $cyan-1)
@@ -76,7 +69,7 @@ header {
       font-family: c(parrafo);
       transition: color 0.3s, text-shadow 0.3s;
 
-      &:hover {
+      &:hover {                          /* Este es un efecto con 3 capaz de sombras*/
         color: $cyan-1; 
         text-shadow: 0 0 5px $cyan-1,
                     0 0 15px $azul-claro,

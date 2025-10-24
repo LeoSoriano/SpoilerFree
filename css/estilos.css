@@ -78,21 +78,10 @@ header {
   max-width: 100%;
   animation: neonPulse 2.5s infinite alternate;
 }
-@media (max-width: 768px) {
-  .logo {
-    width: 140px;
-  }
-}
-@media (max-width: 400px) {
-  .logo {
-    width: 120px;
-  }
-}
-
 @keyframes neonPulse {
-  50% {
+  50% { /* Significa que se aplicara a la mitad de la animacion*/
     filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 25px #00bfff);
-    transform: scale(1.05) rotate(1deg);
+    transform: scale(1.05) rotate(1deg); /* Aumenta el tamaño del elemento un 5% y rota el elemento 1 grado */
   }
   100% {
     filter: drop-shadow(0 0 15px #00ffff) drop-shadow(0 0 30px #00bfff);
@@ -118,7 +107,7 @@ header {
   font-family: c(parrafo);
   transition: color 0.3s, text-shadow 0.3s;
 }
-.navbar .navbar-nav .nav-link:hover {
+.navbar .navbar-nav .nav-link:hover { /* Este es un efecto con 3 capaz de sombras*/
   color: #00ffff;
   text-shadow: 0 0 5px #00ffff, 0 0 15px #00bfff, 0 0 25px #00ffff;
 }
@@ -189,7 +178,7 @@ header {
   max-width: 75%;
   margin: 0 auto;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: hidden; /* Controla que pasa con el contenido que se desborda */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5019607843);
 }
 .carousel-container .carousel-inner img {
@@ -219,7 +208,7 @@ header {
 }
 
 .items {
-  flex: 1 1 calc(25% - 25px);
+  flex: 1 1 calc(25% - 25px); /* significa que use flex grow | flex-shrink y que ocupa el 25% de ancho del contenedor y 25px  para los margenes o gaps*/
   max-width: 400px;
   min-width: 250px;
   background-color: #0d1117;
@@ -282,9 +271,9 @@ header {
   border-radius: 12px;
 }
 .video-wrapper .video-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  position: absolute; /* se posiciona relativo al contenedor mas cercano */
+  inset: 0; /* ocupa toda la extension del contenedor padre */
+  z-index: 2; /* Define la capa en la que esta el elemento */
 }
 
 /* Estrellas en Index */
@@ -497,7 +486,7 @@ h3 {
 p {
   color: #e0e0e0;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.5; /* esto es para darle una altura a cada linea de texto */ /*esto lo multiplicas por el font-size */
   text-align: justify;
 }
 p b {
@@ -924,7 +913,7 @@ section.bg-dark .container {
   transition: all 0.3s;
   box-shadow: 0 5px 15px rgba(0, 191, 255, 0.2);
   display: inline-block;
-  cursor: pointer;
+  cursor: pointer; /* Hace que el cursor se vea como una mano apuntando */
 }
 .seccion-contacto .formulario-contacto .btn-enviar:hover {
   background: rgba(0, 191, 255, 0.8);
@@ -932,7 +921,7 @@ section.bg-dark .container {
   box-shadow: 0 10px 25px rgba(0, 191, 255, 0.4196078431);
 }
 
-footer .redes a, footer ul.footer-menu li a {
+footer .redes a, footer ul.footer-menu li a { /*Placholder para un @extend */
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
