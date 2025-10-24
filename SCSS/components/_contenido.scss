@@ -410,27 +410,27 @@ to { text-shadow: 2px 2px 20px $rojo-fuego; }
 // ===================== FILA DE IMAGENES =====================
 .fila-imagenes {
 display: flex;
-gap: 1rem;
-flex-wrap: nowrap;
-justify-content: left;
+  gap: 4rem;             // espacio entre tarjetas
+  flex-wrap: nowrap;      // evita que se rompan a otra fila
+  justify-content: flex-start; // opcional, centra la fila
+margin-left: 35px;
 
 .card-imagenes {
-flex: 0 0 30%;
-box-sizing: border-box;
-background: $negro-card-f2;
+ flex: 0 0 25%;          // cada tarjeta ocupa 25% del contenedor
+max-width: 25%;
+  box-sizing: border-box; // incluye padding en el ancho
+  padding: 15px;          // reduce el padding para que no rompa la fila
 border-radius: 15px;
-overflow: hidden;
-padding: 35px;
+background: $negro-card-f2;
 transition: transform 0.4s, box-shadow 0.4s;
-gap: 1rem;
 
 h3 {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: $azul-claro;
     text-shadow: 0 0 10px $azul-claro, 0 0 20px $cyan-1, 0 0 30px $cyan-1;
     font-family: c(titulos);
-    font-size: 35px;
+    font-size: 25px;
 }
 
 &:hover {
@@ -440,12 +440,12 @@ h3 {
 
 .card-gallery {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     
 
     img {
-    flex: 0 0 30%; // cada imagen ocupa 30% del contenedor
-  max-width: 30%; // asegura que no se estiren demasiado
+flex: 1; // cada imagen ocupa 30% del contenedor
+max-width: 30%; // asegura que no se estiren demasiado
 height: 275px;
 border-radius: 10px;
 transition: transform 0.4s, filter 0.4s;
@@ -463,11 +463,12 @@ transition: transform 0.4s, filter 0.4s;
 // ===================== FILA DE VIDEOS =====================
 .fila-videos {
 display: flex;
-gap: 1rem;
+gap: 3rem;
 flex-wrap: wrap;
 margin-top: 15px;
 justify-content: flex-start;
 max-width: 100%;
+margin-left: 35px;
 
 .card-video {
     flex: 0 0 auto;

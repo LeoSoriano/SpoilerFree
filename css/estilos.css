@@ -549,27 +549,27 @@ iframe:hover {
 }
 .fila-imagenes {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
   flex-wrap: nowrap;
-  justify-content: left;
+  justify-content: flex-start;
+  margin-left: 35px;
 }
 .fila-imagenes .card-imagenes {
-  flex: 0 0 30%;
+  flex: 0 0 25%;
+  max-width: 25%;
   box-sizing: border-box;
-  background: rgba(20, 20, 20, 0.9490196078);
+  padding: 15px;
   border-radius: 15px;
-  overflow: hidden;
-  padding: 35px;
+  background: rgba(20, 20, 20, 0.9490196078);
   transition: transform 0.4s, box-shadow 0.4s;
-  gap: 1rem;
 }
 .fila-imagenes .card-imagenes h3 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: #00bfff;
   text-shadow: 0 0 10px #00bfff, 0 0 20px #00ffff, 0 0 30px #00ffff;
   font-family: c(titulos);
-  font-size: 35px;
+  font-size: 25px;
 }
 .fila-imagenes .card-imagenes:hover {
   transform: translateY(-10px);
@@ -577,10 +577,10 @@ iframe:hover {
 }
 .fila-imagenes .card-imagenes .card-gallery {
   display: flex;
-  gap: 10px;
+  gap: 5px;
 }
 .fila-imagenes .card-imagenes .card-gallery img {
-  flex: 0 0 30%;
+  flex: 1;
   max-width: 30%;
   height: 275px;
   border-radius: 10px;
@@ -593,11 +593,12 @@ iframe:hover {
 
 .fila-videos {
   display: flex;
-  gap: 1rem;
+  gap: 3rem;
   flex-wrap: wrap;
   margin-top: 15px;
   justify-content: flex-start;
   max-width: 100%;
+  margin-left: 35px;
 }
 .fila-videos .card-video {
   flex: 0 0 auto;
