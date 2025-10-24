@@ -594,12 +594,12 @@ iframe:hover {
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 15px;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 100%;
 }
 .fila-videos .card-video {
-  flex: 1 1 400px;
-  width: 630px;
+  flex: 0 0 auto;
+  width: 530px;
   background: rgba(20, 20, 20, 0.9019607843);
   border-radius: 15px;
   padding: 35px;
@@ -625,7 +625,7 @@ iframe:hover {
 .fila-videos .card-video iframe {
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 95%;
   border-radius: 10px;
   border: none;
   transition: transform 0.4s, box-shadow 0.4s;

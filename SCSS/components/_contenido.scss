@@ -464,12 +464,12 @@ display: flex;
 gap: 1rem;
 flex-wrap: wrap;
 margin-top: 15px;
-justify-content: center;
+justify-content: flex-start;
 max-width: 100%;
 
 .card-video {
-    flex: 1 1 400px;
-    width: 630px;
+    flex: 0 0 auto;
+    width: 530px;
     background: $negro-card-e6;
     border-radius: 15px;
     padding: 35px;
@@ -498,7 +498,7 @@ max-width: 100%;
     iframe {
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 95%;
     border-radius: 10px;
     border: none;
     transition: transform 0.4s, box-shadow 0.4s;
